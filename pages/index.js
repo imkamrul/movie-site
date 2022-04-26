@@ -1,7 +1,12 @@
 import React from "react";
+import HeroSection from "../components/Section/HeroSection";
 
 const index = () => {
-  return <div>hello</div>;
+  return (
+    <>
+      <HeroSection />
+    </>
+  );
 };
 
 export default index;
