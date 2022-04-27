@@ -6,30 +6,41 @@
       "link": "/"
     },
     {
-      "text": "Catagories",
-      "link": "/cata",
+      "text": "Movies",
       "submenu": [
         {
-          "text": "Catagory 1",
-          "link": "/Catagory1"
+          "text": "Bollywood",
+          "link": "/bollywood"
         },
         {
-          "text": "Catagory 2",
-          "link": "/Catagory2"
+          "text": "Dhallywood",
+          "link": "/dhallywood"
+        },
+        {
+          "text": "Hollywood",
+          "link": "/hollywood"
+        },
+
+        {
+          "text": "Tollywood",
+          "link": "/tollywood"
         }
       ]
     },
     {
-      "text": "Catagories2",
-      "link": "/cata",
+      "text": "Series",
       "submenu": [
         {
-          "text": "Catagory 3",
-          "link": "/Catagory3"
+          "text": "Bangla",
+          "link": "/bangla"
         },
         {
-          "text": "Catagory 4",
-          "link": "/Catagory4"
+          "text": "Hindi",
+          "link": "/hindi"
+        },
+        {
+          "text": "English",
+          "link": "/english"
         }
       ]
     },
