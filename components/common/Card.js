@@ -1,12 +1,13 @@
 import Image from "next/image";
 import React from "react";
+import { Heart } from "./SVGIcons";
 
 const Card = () => {
   return (
     <div className="w-3/12 group overflow-hidden text-white">
       <div className="relative overflow-hidden rounded-md">
         <Image
-          className="group-hover:scale-[1.2] ease-out duration-700"
+          className="group-hover:scale-[1.2] ease-out duration-700 group-hover:opacity-70"
           src="/card.jpg"
           alt="movie"
           width={312}
@@ -25,8 +26,11 @@ const Card = () => {
         </div>
       </div>
       <h4 className=" text-xl py-3 ">
-        <span className="group-hover:text-themeText ease-out duration-700">
-          The Wariior Life
+        <span className=" flex justify-between px-2">
+          <span className="group-hover:text-themeText ease-out duration-700">
+            The Wariior Life
+          </span>
+          <span>2020</span>
         </span>
       </h4>
       <p className="flex justify-between px-2">
