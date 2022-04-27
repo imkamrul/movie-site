@@ -70,135 +70,53 @@ const Header = () => {
               </span>
 
               <ul className="js__side-drawer lg:justify-end lg:items-center flex items-start lg:flex-row flex-nowrap flex-col lg:pt-0  bg-themeBG fixed lg:relative lg:top-auto top-0 right-0 h-[100vh] lg:h-auto translate-x-full lg:translate-x-0 transition-transform pt-16 duration-500 px-4 lg:px-0 w-full font-semibold">
-                {nav_link.map((item, index) => {
-                  return (
-                    <>
-                      <li
-                        className="my-1 lg:mx-8"
-                        onClick={switchSideDrawerHandler.bind(this, navOpen)}
+                {nav_link.map((item, idx) => {
+                  return item.submenu?.length ? (
+                    <li className="my-1 lg:mx-8 group relative" key={idx}>
+                      <h3
+                        className="text-white lg:group-hover:text-[#04aa6d] nav__item"
+                        onClick={setSubMenuHeightHandler.bind(
+                          this,
+                          model,
+                          setModel
+                        )}
                       >
-                        <Link href={item.link}>
-                          <a className="nav__item text-white lg:hover:text-themeText">
-                            {item.text}
-                          </a>
-                        </Link>
-                      </li>
-                    </>
+                        {item.text}
+                      </h3>
+                      <div className="js__sub-menu relative lg:absolute  max-h-0 left-0 lg:-left-10 overflow-hidden transition-all duration-500 md:w-[150px]  bg-transparent lg:max-h-screen lg:hidden lg:group-hover:block">
+                        <div className="md:shadow-nav md:flex justify-center p-2 md:m-2.5 bg-themeBG text-white cursor-auto ">
+                          <div className="mb-4 md:mb-0">
+                            <ul className="md:mt-3">
+                              {item.submenu.map((sub_link, index) => {
+                                return (
+                                  <li className="my-4" key={index}>
+                                    <Link href={sub_link.link}>
+                                      <a className="nav__item font-normal hover:text-[#04aa6d]  md:border-b-[1px] px-1 py-3 md:border-b-[#00bf6366]">
+                                        {sub_link.text}
+                                      </a>
+                                    </Link>
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  ) : (
+                    <li
+                      key={idx}
+                      className="my-1 lg:mx-8"
+                      onClick={switchSideDrawerHandler.bind(this, navOpen)}
+                    >
+                      <Link href={item.link}>
+                        <a className="nav__item text-white lg:hover:text-themeText">
+                          {item.text}
+                        </a>
+                      </Link>
+                    </li>
                   );
                 })}
-                <li
-                  className="my-1 lg:mx-8"
-                  onClick={switchSideDrawerHandler.bind(this, navOpen)}
-                >
-                  <Link href="/">
-                    <a className="nav__item text-white lg:hover:text-themeText">
-                      Home
-                    </a>
-                  </Link>
-                </li>
-
-                <li className="my-1 lg:mx-8 group relative">
-                  <h3
-                    className="text-white lg:group-hover:text-[#04aa6d] nav__item"
-                    onClick={setSubMenuHeightHandler.bind(
-                      this,
-                      model,
-                      setModel
-                    )}
-                  >
-                    Catagories
-                  </h3>
-                  <div className="js__sub-menu relative lg:absolute  max-h-0 left-0 lg:-left-10 overflow-hidden transition-all duration-500 md:w-[150px]  bg-transparent lg:max-h-screen lg:hidden lg:group-hover:block">
-                    <div className="md:shadow-nav md:flex justify-center p-2 md:m-2.5 bg-themeBG text-white cursor-auto ">
-                      <div className="mb-4 md:mb-0">
-                        <ul className="md:mt-3">
-                          <li>
-                            <Link href="/cata">
-                              <a className="nav__item font-normal hover:text-[#04aa6d]  md:border-b-[1px] px-1 py-3 md:border-b-[#00bf6366]">
-                                category
-                              </a>
-                            </Link>
-                          </li>
-                          <li className="my-4">
-                            <Link href="/cata">
-                              <a className="nav__item font-normal hover:text-[#04aa6d]  md:border-b-[1px] px-1 py-3 md:border-b-[#00bf6366]">
-                                category
-                              </a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/cata">
-                              <a className="nav__item font-normal hover:text-[#04aa6d]">
-                                category
-                              </a>
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li className="my-1 lg:mx-8 group relative">
-                  <h3
-                    className="text-white lg:group-hover:text-[#04aa6d] nav__item"
-                    onClick={setSubMenuHeightHandler.bind(
-                      this,
-                      model,
-                      setModel
-                    )}
-                  >
-                    Catagories2
-                  </h3>
-                  <div className="js__sub-menu relative lg:absolute  max-h-0 left-0 lg:-left-10 overflow-hidden transition-all duration-500 md:w-[150px]  bg-transparent lg:max-h-screen lg:hidden lg:group-hover:block">
-                    <div className="md:shadow-nav md:flex justify-center p-2 md:m-2.5 bg-themeBG text-white cursor-auto rounded-md lg:shadow-md lg:shadow-themeText">
-                      <div className="mb-4 md:mb-0">
-                        <ul className="md:mt-3">
-                          <li>
-                            <Link href="/cata">
-                              <a className="nav__item font-normal hover:text-[#04aa6d]  md:border-b-[1px] px-1 py-3 md:border-b-[#00bf6366]">
-                                category
-                              </a>
-                            </Link>
-                          </li>
-                          <li className="my-4">
-                            <Link href="/cata">
-                              <a className="nav__item font-normal hover:text-[#04aa6d]  md:border-b-[1px] px-1 py-3 md:border-b-[#00bf6366]">
-                                category
-                              </a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/cata">
-                              <a className="nav__item font-normal hover:text-[#04aa6d]">
-                                category
-                              </a>
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li
-                  className="my-1 lg:mx-8"
-                  onClick={switchSideDrawerHandler.bind(this, navOpen)}
-                >
-                  <Link href="/comming-soon">
-                    <a className="nav__item text-white lg:hover:text-themeText">
-                      Request
-                    </a>
-                  </Link>
-                </li>
-                <li
-                  className="my-1 lg:mx-8"
-                  onClick={switchSideDrawerHandler.bind(this, navOpen)}
-                >
-                  <Link href="/dashboard">
-                    <a className="nav__item text-white lg:hover:text-[#04aa6d]">
-                      Dashboard
-                    </a>
-                  </Link>
-                </li>
                 <li
                   onClick={switchSideDrawerHandler.bind(this, navOpen)}
                   className="my-1 lg:mx-8"
