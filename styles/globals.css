@@ -7,3 +7,21 @@
     @apply font-Poppins;
   }
 }
+.nav__item {
+  position: relative;
+}
+
+.nav__item::before {
+  position: absolute;
+  left: 0;
+  content: "";
+  height: 2px;
+  background-color: #10b981;
+  bottom: -1px;
+  transition: 300ms;
+  width: 0%;
+}
+
+.nav__item:hover::before {
+  width: 100%;
+}

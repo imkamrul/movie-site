@@ -1,0 +1,46 @@
+{
+  "logo": "logo.png",
+  "nav_link": [
+    {
+      "text": "Home",
+      "link": "/"
+    },
+    {
+      "text": "Catagories",
+      "link": "/cata",
+      "submenu": [
+        {
+          "text": "Catagory 1",
+          "link": "/Catagory1"
+        },
+        {
+          "text": "Catagory 2",
+          "link": "/Catagory2"
+        }
+      ]
+    },
+    {
+      "text": "Catagories2",
+      "link": "/cata",
+      "submenu": [
+        {
+          "text": "Catagory 3",
+          "link": "/Catagory3"
+        },
+        {
+          "text": "Catagory 4",
+          "link": "/Catagory4"
+        }
+      ]
+    },
+
+    {
+      "text": "Request",
+      "link": "/request"
+    },
+    {
+      "text": "Dashboard",
+      "link": "/dashboad"
+    }
+  ]
+}
