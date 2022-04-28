@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps, props }) {
   return (
     <>
       <Head>
-        <title>site</title>
+        <title>Movie Scope</title>
       </Head>
       <Layout>
         <Component {...pageProps} />

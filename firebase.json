@@ -1,16 +1,13 @@
 {
   "hosting": {
-    "public": "public",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "rewrites": [
-      {
-        "source": "**",
-        "function": "nextServer"
-      }
-    ]
+    "site": "movie-site-88ca9",
+    "public": "build",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   },
-  "functions": {
-    "source": ".",
-    "runtime": "nodejs12"
-  }
+  "rewrites": [
+    {
+      "source": "**",
+      "destination": "/index.html"
+    }
+  ]
 }
