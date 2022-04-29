@@ -33,7 +33,7 @@ const Card = () => {
           <span>2020</span>
         </span>
       </h4>
-      <p className="flex justify-between px-2">
+      <div className="flex justify-between px-2">
         <span>1hr 24mins</span>
         <span>
           <Rating
@@ -44,7 +44,9 @@ const Card = () => {
           />
           {"  "} 4.5
         </span>
-      </p>
+       
+      
+      </div>
     </div>
   );
 };
