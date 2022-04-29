@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { Heart } from "./SVGIcons";
+import Rating from "react-rating";
 
 const Card = () => {
   return (
@@ -35,7 +35,15 @@ const Card = () => {
       </h4>
       <p className="flex justify-between px-2">
         <span>1hr 24mins</span>
-        <span>4.5 rating</span>
+        <span>
+          <Rating
+            emptySymbol="fa-regular fa-star text-[#F5C518]"
+            fullSymbol="fa-solid fa-star text-[#F5C518]"
+            readonly
+            initialRating={4.5}
+          />
+          {"  "} 4.5
+        </span>
       </p>
     </div>
   );
