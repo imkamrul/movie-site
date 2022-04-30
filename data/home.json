@@ -1,1 +1,27 @@
-{}
+{
+  "hero_slider": [
+    {
+      "bgImage": "/images/hero-slider/1.jpg",
+      "heading": "SLider 1",
+      "desc": "TRADE THE MARKETS BY FOLLOWING THE SIGNALS GIVEN BY OUR EXPERTS ON OUR PAFX TELEGRAM CHANNEL!",
+      "image": "/images/hero-slider/1.jpg",
+      "bgColor": "bg-red-600 "
+    },
+
+    {
+      "bgImage": "/images/hero-slider/3.jpg",
+      "heading": "slider 3",
+      "desc": "LOW RISK, HIGH GROWTH - ACHIEVE CONSISTENT PROFITABILITY BY FOLLOWING THE SIGNALS GIVEN BY OUR EXPERTS ON OUR TELEGRAM CHANNEL",
+      "image": "/images/hero-slider/3.jpg",
+      "bgColor": "bg-blue-600 "
+    },
+
+    {
+      "bgImage": "/images/hero-slider/5.jpg",
+      "heading": "slide r5",
+      "desc": "TRADE THE MARKETS BY FOLLOWING THE SIGNALS GIVEN BY OUR EXPERTS ON OUR PAFX TELEGRAM CHANNEL!",
+      "image": "/images/hero-slider/5.jpg",
+      "bgColor": "bg-blue-600 "
+    }
+  ]
+}

@@ -1,10 +1,12 @@
 import React from "react";
-import HeroSection from "../components/Section/HeroSection";
+import HeroSlider from "../components/HeroSlider";
+
 import homePageData from "../data/home.json";
 const index = ({ pageData }) => {
+  const { hero_slider } = pageData;
   return (
     <>
-      <HeroSection />
+      <HeroSlider heroSliderItem={hero_slider} />
     </>
   );
 };

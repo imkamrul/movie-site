@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
     "next": "12.1.5",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "react-rating": "^2.0.5"
+    "react-rating": "^2.0.5",
+    "swiper": "^8.1.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.5",

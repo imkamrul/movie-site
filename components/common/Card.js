@@ -16,8 +16,8 @@ const Card = () => {
         />
         <div className="absolute bottom-0 right-5">
           <Image
-            className="bg-white rounded-full"
-            src="/heart.png"
+            className="rounded-full"
+            src="/white_Heart.svg"
             alt="heart"
             width={16}
             height={16}
@@ -44,8 +44,6 @@ const Card = () => {
           />
           {"  "} 4.5
         </span>
-       
-      
       </div>
     </div>
   );
