@@ -1,6 +1,5 @@
 import React from "react";
-import HeroSlider from "../components/HeroSlider";
-
+import HeroSlider from "../components/HeroSlider/HeroSlider";
 import homePageData from "../data/home.json";
 const index = ({ pageData }) => {
   const { hero_slider } = pageData;

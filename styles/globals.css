@@ -28,3 +28,14 @@
 body {
   background-color: #0a0e17;
 }
+.arrow-item:hover > .arrow {
+  opacity: 3;
+}
+.arrow {
+  opacity: 0;
+}
+.main-container {
+  max-width: 80.625rem;
+  margin: auto;
+  padding: 0 1.5rem;
+}

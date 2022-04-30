@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Autoplay, Navigation, EffectFade } from "swiper";
+import SwiperCore, {
+  Autoplay,
+  Navigation,
+  Pagination,
+  Mousewheel,
+  Keyboard,
+  EffectFade,
+} from "swiper";
 import { useRef } from "react";
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -61,6 +68,14 @@ const HeroSlider = ({ heroSliderItem }) => {
         </div>
         <Swiper
           loop={true}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          mousewheel={true}
+          keyboard={true}
+          grabCursor={true}
+          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
           slidesPerView={1}
           autoplay={{
             delay: 5000,
