@@ -2,9 +2,10 @@ import Image from "next/image";
 import React from "react";
 import Rating from "react-rating";
 
-const Card = () => {
+const Card = ({ style }) => {
+  console.log(style);
   return (
-    <div className="w-full  md:w-3/12 px-2 py-4 md:py-0 group">
+    <div className={`w-full  ${style} px-2 py-4  group`}>
       <div className="relative overflow-hidden rounded-md   text-white">
         <a href="https://www.google.com/" className="z-100">
           <Image

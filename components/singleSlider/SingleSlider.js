@@ -5,7 +5,8 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
+import SwiperCore from "swiper";
+SwiperCore.use([Autoplay, Pagination, Navigation]);
 const SingleSlider = () => {
   return (
     <div className="text-white">
@@ -16,8 +17,8 @@ const SingleSlider = () => {
         }}
         loop={true}
         autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
+          delay: 5000,
+          disableOnInteraction: true,
         }}
         modules={[Autoplay, Pagination, Navigation]}
       >

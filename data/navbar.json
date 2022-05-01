@@ -10,20 +10,20 @@
       "submenu": [
         {
           "text": "Bollywood",
-          "link": "/bollywood"
+          "link": "/catagories/bollywood"
         },
         {
           "text": "Dhallywood",
-          "link": "/dhallywood"
+          "link": "/catagories/dhallywood"
         },
         {
           "text": "Hollywood",
-          "link": "/hollywood"
+          "link": "/catagories/hollywood"
         },
 
         {
           "text": "Tollywood",
-          "link": "/tollywood"
+          "link": "/catagories/tollywood"
         }
       ]
     },

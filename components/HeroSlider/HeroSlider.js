@@ -75,7 +75,7 @@ const HeroSlider = ({ heroSliderItem }) => {
           // mousewheel={true}
           keyboard={true}
           // grabCursor={true}
-          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+          modules={[Navigation, Mousewheel, Keyboard]}
           slidesPerView={1}
           autoplay={{
             delay: 5000,
