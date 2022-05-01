@@ -14,8 +14,9 @@ const customStyles = {
     justifyContent: "center",
     left: "0",
     top: "0",
-    zIndex: "90",
+    zIndex: "9999",
     overflow: "hidden",
+    position: "relative",
   },
 };
 const HeroSliderItem = (props) => {
@@ -42,13 +43,13 @@ const HeroSliderItem = (props) => {
         backgroundPosition: "center",
         backgroundSize: "cover",
         height: "auto",
-        zIndex: "999999",
+        zIndex: "9999",
       }}
       className="w-screen bg-slider"
     >
-      <div className="container mx-auto -z-40">
+      <div className="container mx-auto ">
         <div className="h-auto lg:h-[90vh] py-5  container 3xl:mx-auto flex flex-col-reverse lg:flex-row items-center lg:px-[70px]">
-          <div className="w-full lg:w-6/12  pl-3 ">
+          <div className="w-full lg:w-6/12  pl-3 z-[999]">
             <h2 className="text-white text-xl lg:text-6xl font-semibold">
               KING OF THE SKULL
             </h2>
@@ -80,10 +81,10 @@ const HeroSliderItem = (props) => {
               <span className="text-[#1F80DF]">Language</span> Language
             </p>
 
-            <div className="flex mb-10 lg:mb-0">
+            <div className="flex mb-10 lg:mb-0 z-50">
               <a
                 href=""
-                className="bg-[#1F80DF] px-4 py-2 rounded-sm mt-5 inline-block text-white uppercase text-sm lg:text-lg w-6/12 lg:w-4/12"
+                className="bg-[#1F80DF] px-4 py-2 rounded-sm mt-5 inline-block text-white uppercase text-sm lg:text-lg w-6/12 lg:w-4/12 "
               >
                 <i className="fa-solid fa-play pr-2" /> Play Now
               </a>
@@ -132,17 +133,17 @@ const HeroSliderItem = (props) => {
                 style={customStyles}
               >
                 <div
-                  className="z-[99990] h-screen w-screen relative"
+                  className="z-50 h-screen w-screen relative"
                   onClick={closeModal}
                 >
                   <CrossIcon2
-                    className="w-6 fixed top-10 right-10 z-[999] cursor-pointer"
+                    className="w-6 fixed top-10 right-10 z-50 cursor-pointer"
                     onClick={closeModal}
                   />
                 </div>
 
                 <ReactPlayer
-                  className="!w-[calc(100%+60px)] !h-auto md:!w-[640px] aspect-video relative z-[999]"
+                  className="!w-[calc(100%+60px)] !h-auto md:!w-[640px] aspect-video relative z-50"
                   url={props.src}
                   loop={true}
                   muted={false}
