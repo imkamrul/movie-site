@@ -137,3 +137,15 @@ body {
 .swiper-pagination-bullet-active {
   background-color: #10b981 !important;
 }
+.search-container::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+
+.search-container::-webkit-scrollbar-track {
+  display: none;
+}
+
+.search-container::-webkit-scrollbar-thumb {
+  background-color: #10b981 !important;
+}
