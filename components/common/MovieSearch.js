@@ -4,9 +4,9 @@ import Card from "./Card";
 const MovieSearch = () => {
   return (
     <section className="my-10 ">
-      <h1 className="text-center text-3xl py-4 text-white">
+      <h3 className="text-center text-3xl py-4 text-white">
         Search Your Favorite Movie
-      </h1>
+      </h3>
 
       <div className="flex justify-center items-center">
         <i className="fa-solid fa-magnifying-glass text-themeText text-3xl -mr-10 z-30" />
