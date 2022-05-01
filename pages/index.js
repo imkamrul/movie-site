@@ -1,4 +1,5 @@
 import React from "react";
+import MovieSection from "../components/common/MovieSection";
 import HeroSlider from "../components/HeroSlider/HeroSlider";
 import homePageData from "../data/home.json";
 const index = ({ pageData }) => {
@@ -6,6 +7,10 @@ const index = ({ pageData }) => {
   return (
     <>
       <HeroSlider heroSliderItem={hero_slider} />
+      <MovieSection />
+      <MovieSection />
+      <MovieSection />
+      <MovieSection />
     </>
   );
 };
