@@ -129,3 +129,15 @@ body {
     opacity: 0;
   }
 }
+
+.swiper-pagination-bullet {
+  background-color: white !important;
+  width: 40px !important;
+  height: 5px !important;
+  border-radius: 0 !important;
+  opacity: 1 !important;
+  margin: 0 5px !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: #10b981 !important;
+}
