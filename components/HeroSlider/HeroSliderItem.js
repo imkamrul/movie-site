@@ -1,21 +1,52 @@
 import Image from "next/image";
-import Link from "next/link";
-
+import React, { useCallback, useState } from "react";
+import Modal from "react-modal";
+import ReactPlayer from "react-player";
+import { CrossIcon2 } from "../common/SVGIcons";
+import BackgroundSVG from "../ui/BackgroundSVG";
+// modal style
+const customStyles = {
+  content: {
+    width: "100vw",
+    height: "100vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    left: "0",
+    top: "0",
+    zIndex: "90",
+    overflow: "hidden",
+  },
+};
 const HeroSliderItem = (props) => {
-  const { bgImage, heading, desc, image, isActive } = props;
+  console.log(props);
+  const { bgImage, heading, desc, image, isActive, bg_svg } = props;
 
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const [playing, setPlaying] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+    setPlaying(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+    setPlaying(true);
+  }
   return (
-    <div
+    <section
       style={{
         background: `url(${bgImage})`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundSize: "cover",
         height: "auto",
+        zIndex: "999999",
       }}
-      className="w-screen"
+      className="w-screen bg-slider"
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto -z-40">
         <div className="h-auto lg:h-[90vh] py-5  container 3xl:mx-auto flex flex-col-reverse lg:flex-row items-center lg:px-[70px]">
           <div className="w-full lg:w-6/12  pl-3 ">
             <h2 className="text-white text-xl lg:text-6xl font-semibold">
@@ -65,18 +96,68 @@ const HeroSliderItem = (props) => {
             </div>
           </div>
           <div className="w-full lg:w-6/12 px-5 lg:px-[35px]">
-            <Image
-              src={image}
-              alt=""
-              width={582}
-              height={330}
-              layout="responsive"
-              className="rounded px-10  mt-5 block"
-            />
+            <div className="relative">
+              <Image
+                src={image}
+                alt=""
+                width={582}
+                height={330}
+                layout="responsive"
+                className="rounded px-10  mt-5 block "
+              />
+              <span>
+                <a
+                  id="play-video"
+                  className="video-play-button cursor-pointer inline-block"
+                  onClick={openModal}
+                >
+                  <Image
+                    src="/play-icon.svg"
+                    width={35}
+                    height={35}
+                    layout="fixed"
+                    alt="play-icon"
+                    className="inline-block"
+                  />
+                </a>
+              </span>
+            </div>
+
+            {/* open modal trigger */}
+            {/* modal  */}
+            {useCallback(
+              <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                style={customStyles}
+              >
+                <div
+                  className="z-[99990] h-screen w-screen relative"
+                  onClick={closeModal}
+                >
+                  <CrossIcon2
+                    className="w-6 fixed top-10 right-10 z-[999] cursor-pointer"
+                    onClick={closeModal}
+                  />
+                </div>
+
+                <ReactPlayer
+                  className="!w-[calc(100%+60px)] !h-auto md:!w-[640px] aspect-video relative z-[999]"
+                  url={props.src}
+                  loop={true}
+                  muted={false}
+                  playing={true}
+                  playsinline={true}
+                  controls={true}
+                />
+              </Modal>,
+              [modalIsOpen, closeModal]
+            )}
           </div>
+          <BackgroundSVG src={bg_svg} style={{ horizontalPositio: "left-0" }} />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -5,7 +5,10 @@
       "heading": "SLider 1",
       "desc": "TRADE THE MARKETS BY FOLLOWING THE SIGNALS GIVEN BY OUR EXPERTS ON OUR PAFX TELEGRAM CHANNEL!",
       "image": "/images/hero-slider/1.jpg",
-      "bgColor": "bg-red-600 "
+      "bgColor": "bg-red-600 ",
+      "video_src": "https://fundednext.fra1.digitaloceanspaces.com/Chris-Gayle.mp4",
+      "video_src_full": "https://youtu.be/HTF8IwbUADE",
+      "bg_svg": "celebrity.svg"
     },
 
     {
@@ -13,7 +16,10 @@
       "heading": "slider 3",
       "desc": "LOW RISK, HIGH GROWTH - ACHIEVE CONSISTENT PROFITABILITY BY FOLLOWING THE SIGNALS GIVEN BY OUR EXPERTS ON OUR TELEGRAM CHANNEL",
       "image": "/images/hero-slider/3.jpg",
-      "bgColor": "bg-blue-600 "
+      "bgColor": "bg-blue-600 ",
+      "video_src": "https://fundednext.fra1.digitaloceanspaces.com/Chris-Gayle.mp4",
+      "video_src_full": "https://youtu.be/HTF8IwbUADE",
+      "bg_svg": "celebrity.svg"
     },
 
     {
@@ -21,7 +27,10 @@
       "heading": "slide r5",
       "desc": "TRADE THE MARKETS BY FOLLOWING THE SIGNALS GIVEN BY OUR EXPERTS ON OUR PAFX TELEGRAM CHANNEL!",
       "image": "/images/hero-slider/5.jpg",
-      "bgColor": "bg-blue-600 "
+      "bgColor": "bg-blue-600 ",
+      "video_src": "https://fundednext.fra1.digitaloceanspaces.com/Chris-Gayle.mp4",
+      "video_src_full": "https://youtu.be/HTF8IwbUADE",
+      "bg_svg": "celebrity.svg"
     }
   ]
 }
