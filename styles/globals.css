@@ -41,10 +41,6 @@ body {
 }
 
 .bg-slider {
-  /* background: linear-gradient(
-    rgba(0, 0, 0, 0.043),
-    rgba(0, 0, 0, 0.116)
-  ) !important; */
   position: relative;
 }
 .bg-slider::before {

@@ -16,6 +16,7 @@ const catagories = ({ data }) => {
         <div className="w-3/12 px-3">
           <div className="py-3">
             <h4 className="text-lg pb-2">Search Vedios</h4>
+
             <div className=" flex">
               <input
                 type="text"

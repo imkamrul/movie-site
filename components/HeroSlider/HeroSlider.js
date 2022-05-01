@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
   Autoplay,
   Navigation,
-  Pagination,
   Mousewheel,
   Keyboard,
   EffectFade,
@@ -68,13 +67,8 @@ const HeroSlider = ({ heroSliderItem }) => {
         </div>
         <Swiper
           loop={true}
-          pagination={{
-            clickable: true,
-          }}
           navigation={true}
-          // mousewheel={true}
           keyboard={true}
-          // grabCursor={true}
           modules={[Navigation, Mousewheel, Keyboard]}
           slidesPerView={1}
           autoplay={{
