@@ -113,7 +113,7 @@ export const CrossIcon2 = (props) => {
     <span {...props}>
       <svg
         viewBox="0 0 94.926 94.926"
-        fill="black"
+        fill="green"
         xmlns="http://www.w3.org/2000/svg"
         style={props.style}
       >

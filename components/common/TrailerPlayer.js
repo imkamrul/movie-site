@@ -19,7 +19,6 @@ const TrailerPlayer = () => {
       top: "0",
       zIndex: "90",
       overflow: "hidden",
-      BackGrounColor: "#001529",
     },
   };
 
@@ -53,11 +52,11 @@ const TrailerPlayer = () => {
           style={customStyles}
         >
           <div
-            className="absolute h-screen w-screen bg-black"
+            className="absolute h-screen w-screen bg-themeBG"
             onClick={closeModal}
           >
             <CrossIcon2
-              className="w-6 fixed top-[233px] right-10 z-[9999] cursor-pointer "
+              className="w-6 fixed top-20 right-10 z-[9999] cursor-pointer"
               onClick={closeModal}
             />
           </div>
