@@ -9,7 +9,7 @@ const Card = ({ style }) => {
       <div className="relative overflow-hidden rounded-md   text-white">
         <Link href="/movie/1">
           <>
-            <a href="/movie/1" className="z-100">
+            <a className="z-100">
               <Image
                 className="group-hover:scale-[1.2] ease-out duration-700 group-hover:opacity-70"
                 src="/card.jpg"
@@ -20,7 +20,7 @@ const Card = ({ style }) => {
               />
             </a>
             <div className="absolute hidden group-hover:block top-[40%] right-[45%] transition ease-in-out duration-700 cursor-pointer">
-              <a href="/movie/1">
+              <a>
                 <Image
                   className="rounded-full"
                   src="/play-button-green.svg"
