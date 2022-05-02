@@ -210,7 +210,7 @@ const MovieCollection = () => {
           </Modal>
         </div>
 
-        <div className="">
+        <div className=" px-[40px] my-10">
           <Table />
         </div>
       </div>
