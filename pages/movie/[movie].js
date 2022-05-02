@@ -5,7 +5,7 @@ import Player from "../../components/common/Player";
 const movie = () => {
   return (
     <>
-      <Player />
+      {/* <Player /> */}
       <MovieInfo />
     </>
   );

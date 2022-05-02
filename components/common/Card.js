@@ -9,27 +9,24 @@ const Card = ({ style }) => {
       <div className="relative overflow-hidden rounded-md   text-white">
         <Link href="/movie/1">
           <>
-            <a className="z-100">
-              <Image
-                className="group-hover:scale-[1.2] ease-out duration-700 group-hover:opacity-70"
-                src="/card.jpg"
-                alt="movie"
-                width={312}
-                height={175}
-                layout="responsive"
-              />
-            </a>
+            <Image
+              className="group-hover:scale-[1.2] ease-out duration-700 group-hover:opacity-70"
+              src="/card.jpg"
+              alt="movie"
+              width={312}
+              height={175}
+              layout="responsive"
+            />
+
             <div className="absolute hidden group-hover:block top-[40%] right-[45%] transition ease-in-out duration-700 cursor-pointer">
-              <a>
-                <Image
-                  className="rounded-full"
-                  src="/play-button-green.svg"
-                  alt="heart"
-                  width={35}
-                  height={35}
-                  layout="fixed"
-                />
-              </a>
+              <Image
+                className="rounded-full"
+                src="/play-button-green.svg"
+                alt="heart"
+                width={35}
+                height={35}
+                layout="fixed"
+              />
             </div>
             <div className="absolute bottom-0 right-5">
               <Image
