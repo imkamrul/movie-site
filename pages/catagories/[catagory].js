@@ -9,22 +9,19 @@ const catagories = ({ data }) => {
   return (
     <section className="text-white container mx-auto py-10">
       <h4 className="text-white text-center text-3xl py-5">Hollywood</h4>
-      <div className="flex pr-4">
-        <div className="w-8/12 flex flex-wrap">
-          <Card style="md:w-3/12 lg:w-4/12" />
-          <Card style="md:w-3/12 lg:w-4/12" />
-          <Card style="md:w-3/12 lg:w-4/12" />
-          <Card style="md:w-3/12 lg:w-4/12" />
-          <Card style="md:w-3/12 lg:w-4/12" />
-          <Card style="md:w-3/12 lg:w-4/12" />
-          <Card style="md:w-3/12 lg:w-4/12" />
-          <Card style="md:w-3/12 lg:w-4/12" />
-          <Card style="md:w-3/12 lg:w-4/12" />
-          <Card style="md:w-3/12 lg:w-4/12" />
-          <Card style="md:w-3/12 lg:w-4/12" />
-          <Card style="md:w-3/12 lg:w-4/12" />
+      <div className="flex md:pr-4 flex-wrap">
+        <div className="w-full md:w-8/12 flex flex-wrap">
+          <Card style="md:w-6/12 lg:w-3/12" />
+          <Card style="md:w-6/12 lg:w-3/12" />
+          <Card style="md:w-6/12 lg:w-3/12" />
+          <Card style="md:w-6/12 lg:w-3/12" />
+          <Card style="md:w-6/12 lg:w-3/12" />
+          <Card style="md:w-6/12 lg:w-3/12" />
+          <Card style="md:w-6/12 lg:w-3/12" />
+          <Card style="md:w-6/12 lg:w-3/12" />
+          <Card style="md:w-6/12 lg:w-3/12" />
         </div>
-        <div className="w-4/12 px-3">
+        <div className="w-full md:w-4/12 px-3">
           <div className="py-3">
             <h4 className="text-lg pb-2">Search Vedios</h4>
 
@@ -32,11 +29,11 @@ const catagories = ({ data }) => {
               <input
                 type="text"
                 placeholder="Movies name.."
-                className="w-8/12 py-1  pl-4 text-black outline-hidden focus:outline-none"
+                className="w-full md:w-8/12 py-1  pl-4 text-black outline-hidden focus:outline-none"
               />
               <button className="bg-themeText px-2 py-3">Search</button>
             </div>
-            <div className="overflow-y-auto overflow-hidden h-96 w-10/12 search-container mt-5">
+            <div className="overflow-y-auto overflow-hidden h-96 md:w-12/12 search-container mt-5">
               <SmallCart />
               <SmallCart />
               <SmallCart />

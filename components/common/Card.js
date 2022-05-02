@@ -8,7 +8,7 @@ const Card = ({ style }) => {
     <div className={`w-full  ${style} px-2 py-4  group`}>
       <div className="relative overflow-hidden rounded-md   text-white">
         <Link href="/movie/1">
-          <>
+          <a>
             <Image
               className="group-hover:scale-[1.2] ease-out duration-700 group-hover:opacity-70"
               src="/card.jpg"
@@ -38,7 +38,7 @@ const Card = ({ style }) => {
                 layout="fixed"
               />
             </div>
-          </>
+          </a>
         </Link>
       </div>
       <h4 className=" text-xl py-3 ">

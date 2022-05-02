@@ -3,8 +3,8 @@ import Card from "./Card";
 
 const MovieSearch = () => {
   return (
-    <section className="my-10 ">
-      <h3 className="text-center text-3xl py-4 text-white">
+    <section className="my-10 container mx-auto">
+      <h3 className="text-center text-xl md:text-3xl py-4 text-white">
         Search Your Favorite Movie
       </h3>
 
@@ -13,7 +13,7 @@ const MovieSearch = () => {
         <input
           type="text"
           placeholder="Movies name.."
-          className="w-4/12 py-3 rounded pl-14 outline  outline-themeText"
+          className="w-8/12 lg:w-4/12 py-3 rounded pl-14 outline  outline-themeText"
         />
       </div>
       <div className="md:flex text-white pt-5 flex-wrap">

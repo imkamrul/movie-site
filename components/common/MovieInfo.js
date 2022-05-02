@@ -6,11 +6,11 @@ const MovieInfo = () => {
   return (
     <section>
       <div className="container mx-auto text-white">
-        <div className="flex justify-between items-center">
+        <div className="md:flex justify-between items-center">
           <h2 className="text-4xl py-3">The Warrior Life</h2>
           <TrailerPlayer />
         </div>
-        <p className="text-sm">
+        <p className="text-sm py-2">
           The blood-soaked land of Kolar Gold Fields (KGF) has a new overlord
           now – Rocky, whose name strikes fear in the heart of his foes. His
           allies look up to Rocky as their savior, the government sees him as a
