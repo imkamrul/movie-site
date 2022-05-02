@@ -13,6 +13,11 @@ const DashboardNav = () => {
           <i className="pr-3 fa-solid fa-video" /> Movies
         </a>
       </Link>
+      <Link href="/movie-collection">
+        <a className="block my-2 py-2 pl-5 group  hover:bg-[#0A0E17]">
+          <i className="pr-3 fa-solid fa-video" /> Series
+        </a>
+      </Link>
       <Link href="/request-collection">
         <a className="block my-2 py-2 pl-5 group  hover:bg-[#0A0E17]">
           <i className="pr-3 fa-solid fa-clipboard-question" /> Request
