@@ -16,7 +16,6 @@ const customStyles = {
     top: "0",
     zIndex: "9999",
     overflow: "hidden",
-    position: "relative",
   },
 };
 const HeroSliderItem = (props) => {
