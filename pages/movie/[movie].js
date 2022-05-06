@@ -1,27 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import MovieInfo from "../../components/common/MovieInfo";
-import ReactPlayer from "react-player";
-
+import Player from "../../components/common/Player";
 const Movie = ({ data }) => {
-  const [player, setPlayer] = useState(null);
-
-  useEffect(() => {
-    setPlayer(
-      <ReactPlayer
-        className="!w-[calc(100%+60px)]  md:!w-[100%] !h-[90vh] aspect-video mx-auto"
-        url={"https://youtu.be/5Eqb_-j3FDA"}
-        loop={false}
-        muted={false}
-        playing={true}
-        playsinline={true}
-        controls={true}
-      />
-    );
-  }, []);
-
   return (
     <>
-      {player}
+      <Player />
       <MovieInfo />
     </>
   );
