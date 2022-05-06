@@ -1,17 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MovieInfo from "../../components/common/MovieInfo";
-import Player from "../../components/common/Player";
+import ReactPlayer from "react-player";
 
-const movie = () => {
+const Movie = ({ data }) => {
+  const [player, setPlayer] = useState(null);
+
+  useEffect(() => {
+    setPlayer(
+      <ReactPlayer
+        className="!w-[calc(100%+60px)]  md:!w-[100%] !h-[90vh] aspect-video mx-auto"
+        url={"https://youtu.be/5Eqb_-j3FDA"}
+        loop={false}
+        muted={false}
+        playing={true}
+        playsinline={true}
+        controls={true}
+      />
+    );
+  }, []);
+
   return (
     <>
-      {/* <Player /> */}
+      {player}
       <MovieInfo />
     </>
   );
 };
 
-export default movie;
 export async function getStaticPaths() {
   const res = await fetch("https://kamrul-hasan01.github.io/api/pages.json");
   const data = await res.json();
@@ -23,9 +38,11 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   console.log(params);
-  const res = await fetch("https://kamrul-hasan01.github.io/api/pages.json");
-  const data = await res.json();
+  // const res = await fetch("https://kamrul-hasan01.github.io/api/pages.json");
+  // const data = await res.json();
   return {
-    props: { data, params },
+    props: {},
   };
 }
+
+export default Movie;

@@ -139,6 +139,22 @@ const HeroSliderItem = (props) => {
                     className="w-6 fixed top-10 right-10 z-50 cursor-pointer"
                     onClick={closeModal}
                   />
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ducimus quo ut vitae perferendis aliquid maxime. Autem magni
+                    nesciunt placeat magnam, illum maxime rerum ex totam
+                    repellendus iure enim sint culpa provident sequi facere
+                    dolorum tenetur, quas nihil quae excepturi molestias? Odit,
+                    consectetur mollitia quod, dicta aliquam sapiente et at
+                    vitae ad perspiciatis minima cupiditate alias perferendis
+                    harum quisquam rerum. Minima recusandae libero ipsum nulla
+                    quia nostrum doloribus! Perferendis minima veritatis
+                    molestias recusandae doloribus iusto veniam accusamus quam
+                    quos distinctio, magni atque esse repellendus reprehenderit?
+                    Illo exercitationem aspernatur commodi magnam vel delectus
+                    perferendis eum, necessitatibus dolor assumenda temporibus
+                    aliquid expedita asperiores?
+                  </p>
                 </div>
 
                 <ReactPlayer
