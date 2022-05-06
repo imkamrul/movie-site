@@ -29,8 +29,8 @@ const HeroSlider = ({ heroSliderItem }) => {
   return (
     <>
       <div className="relative h-full arrow-item">
-        <div className="flex justify-between items-center h-full arrow tr">
-          <div className="absolute z-10 top-0 left-6 h-full flex items-center justify-center tr">
+        <div className="flex justify-between items-center h-full arrow tr hero-slider">
+          <div className="absolute z-0 top-0 left-6 h-full flex items-center justify-center tr">
             <div
               className={`group relative w-16 cursor-pointer  h-16`}
               ref={prevRef}

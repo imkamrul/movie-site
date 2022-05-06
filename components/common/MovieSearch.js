@@ -9,7 +9,7 @@ const MovieSearch = () => {
       </h3>
 
       <div className="flex justify-center items-center">
-        <i className="fa-solid fa-magnifying-glass text-themeText text-3xl -mr-10 z-30" />
+        <i className="fa-solid fa-magnifying-glass text-themeText text-3xl -mr-10 z-0" />
         <input
           type="text"
           placeholder="Movies name.."

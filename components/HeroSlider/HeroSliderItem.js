@@ -16,6 +16,7 @@ const customStyles = {
     top: "0",
     zIndex: "9999",
     overflow: "hidden",
+    backgroundColor: "#0A0E17",
   },
 };
 const HeroSliderItem = (props) => {
@@ -46,7 +47,7 @@ const HeroSliderItem = (props) => {
       }}
       className="w-screen bg-slider"
     >
-      <div className="container mx-auto ">
+      <div className="container mx-auto">
         <div className="h-auto lg:h-[90vh] py-5  container 3xl:mx-auto flex flex-col-reverse lg:flex-row items-center lg:px-[70px]">
           <div className="w-full lg:w-6/12  pl-3 z-[999]">
             <h2 className="text-white text-xl lg:text-6xl font-semibold">
@@ -132,40 +133,23 @@ const HeroSliderItem = (props) => {
                 style={customStyles}
               >
                 <div
-                  className="z-50 h-screen w-screen relative"
+                  className="z-[9999] h-screen w-screen relative overflow-hidden flex justify-center items-center"
                   onClick={closeModal}
                 >
                   <CrossIcon2
-                    className="w-6 fixed top-10 right-10 z-50 cursor-pointer"
+                    className="w-6 fixed top-[120px] right-14 z-50 cursor-pointer"
                     onClick={closeModal}
                   />
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ducimus quo ut vitae perferendis aliquid maxime. Autem magni
-                    nesciunt placeat magnam, illum maxime rerum ex totam
-                    repellendus iure enim sint culpa provident sequi facere
-                    dolorum tenetur, quas nihil quae excepturi molestias? Odit,
-                    consectetur mollitia quod, dicta aliquam sapiente et at
-                    vitae ad perspiciatis minima cupiditate alias perferendis
-                    harum quisquam rerum. Minima recusandae libero ipsum nulla
-                    quia nostrum doloribus! Perferendis minima veritatis
-                    molestias recusandae doloribus iusto veniam accusamus quam
-                    quos distinctio, magni atque esse repellendus reprehenderit?
-                    Illo exercitationem aspernatur commodi magnam vel delectus
-                    perferendis eum, necessitatibus dolor assumenda temporibus
-                    aliquid expedita asperiores?
-                  </p>
+                  <ReactPlayer
+                    className="!w-[calc(100%+60px)] !h-auto md:!w-[1040px] aspect-video relative z-50"
+                    url="https://youtu.be/5Eqb_-j3FDA"
+                    loop={false}
+                    muted={false}
+                    playing={true}
+                    playsinline={true}
+                    controls={true}
+                  />
                 </div>
-
-                <ReactPlayer
-                  className="!w-[calc(100%+60px)] !h-auto md:!w-[640px] aspect-video relative z-50"
-                  url={props.src}
-                  loop={true}
-                  muted={false}
-                  playing={true}
-                  playsinline={true}
-                  controls={true}
-                />
               </Modal>,
               [modalIsOpen, closeModal]
             )}

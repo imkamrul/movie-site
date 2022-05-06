@@ -149,3 +149,6 @@ body {
 .search-container::-webkit-scrollbar-thumb {
   background-color: #10b981 !important;
 }
+.swiper {
+  z-index: 0 !important;
+}
