@@ -51,17 +51,13 @@ const Header = () => {
   const headerRef = useRef(null);
   useEffect(() => {
     // const header = document.querySelector("header");
-    // const HeaderBG = document.querySelector(".js-color-set");
+    const HeaderBG = document.querySelector(".js-color-set");
 
     const js_ob = document.querySelector(".js_ob");
     const navObserverCallback = (watchEntry, navObserver) => {
       if (!watchEntry[0].isIntersecting) {
-        const HeaderBG = document.querySelector(".js-color-set");
-        // console.log(HeaderBG);
         HeaderBG.classList.add("active");
       } else {
-        const HeaderBG = document.querySelector(".js-color-set");
-        // console.log(HeaderBG);
         HeaderBG.classList.remove("active");
       }
 

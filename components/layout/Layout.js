@@ -5,14 +5,17 @@ import { useRouter } from "next/router";
 const Layout = ({ children }) => {
   const router = useRouter();
   const [nav, setNav] = useState(false);
-  console.log(router.pathname);
+
   useEffect(() => {
     if (router.pathname === "/") {
       setNav(true);
     } else if (router.pathname.includes("catagories")) {
+    } else if (router.pathname.includes("movie")) {
       setNav(true);
-      console.log("true");
     } else {
+      setNav(false);
+    }
+    if (router.pathname === "/movie-collection") {
       setNav(false);
     }
   }, [router]);
