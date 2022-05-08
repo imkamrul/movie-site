@@ -101,6 +101,256 @@ const Table = () => {
                 </a>
               </td>
             </tr>
+            <tr className="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
+              <th
+                scope="row"
+                className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
+              >
+                Microsoft Surface Pro
+              </th>
+              <td className="px-6 py-4">White</td>
+              <td className="px-6 py-4">fghfg</td>
+              <td className="px-6 py-4">9</td>
+              <td className="px-6 py-4 text-center">
+                <a
+                  href="#"
+                  className="mx-3 font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                >
+                  Edit
+                </a>
+                <a
+                  href="#"
+                  className="mx-3 font-medium text-[red] hover:underline"
+                >
+                  Delete
+                </a>
+              </td>
+            </tr>
+            <tr className="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
+              <th
+                scope="row"
+                className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
+              >
+                Microsoft Surface Pro
+              </th>
+              <td className="px-6 py-4">White</td>
+              <td className="px-6 py-4">fghfg</td>
+              <td className="px-6 py-4">9</td>
+              <td className="px-6 py-4 text-center">
+                <a
+                  href="#"
+                  className="mx-3 font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                >
+                  Edit
+                </a>
+                <a
+                  href="#"
+                  className="mx-3 font-medium text-[red] hover:underline"
+                >
+                  Delete
+                </a>
+              </td>
+            </tr>
+            <tr className="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
+              <th
+                scope="row"
+                className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
+              >
+                Microsoft Surface Pro
+              </th>
+              <td className="px-6 py-4">White</td>
+              <td className="px-6 py-4">fghfg</td>
+              <td className="px-6 py-4">9</td>
+              <td className="px-6 py-4 text-center">
+                <a
+                  href="#"
+                  className="mx-3 font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                >
+                  Edit
+                </a>
+                <a
+                  href="#"
+                  className="mx-3 font-medium text-[red] hover:underline"
+                >
+                  Delete
+                </a>
+              </td>
+            </tr>
+            <tr className="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
+              <th
+                scope="row"
+                className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
+              >
+                Microsoft Surface Pro
+              </th>
+              <td className="px-6 py-4">White</td>
+              <td className="px-6 py-4">fghfg</td>
+              <td className="px-6 py-4">9</td>
+              <td className="px-6 py-4 text-center">
+                <a
+                  href="#"
+                  className="mx-3 font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                >
+                  Edit
+                </a>
+                <a
+                  href="#"
+                  className="mx-3 font-medium text-[red] hover:underline"
+                >
+                  Delete
+                </a>
+              </td>
+            </tr>
+            <tr className="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
+              <th
+                scope="row"
+                className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
+              >
+                Microsoft Surface Pro
+              </th>
+              <td className="px-6 py-4">White</td>
+              <td className="px-6 py-4">fghfg</td>
+              <td className="px-6 py-4">9</td>
+              <td className="px-6 py-4 text-center">
+                <a
+                  href="#"
+                  className="mx-3 font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                >
+                  Edit
+                </a>
+                <a
+                  href="#"
+                  className="mx-3 font-medium text-[red] hover:underline"
+                >
+                  Delete
+                </a>
+              </td>
+            </tr>
+            <tr className="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
+              <th
+                scope="row"
+                className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
+              >
+                Microsoft Surface Pro
+              </th>
+              <td className="px-6 py-4">White</td>
+              <td className="px-6 py-4">fghfg</td>
+              <td className="px-6 py-4">9</td>
+              <td className="px-6 py-4 text-center">
+                <a
+                  href="#"
+                  className="mx-3 font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                >
+                  Edit
+                </a>
+                <a
+                  href="#"
+                  className="mx-3 font-medium text-[red] hover:underline"
+                >
+                  Delete
+                </a>
+              </td>
+            </tr>
+            <tr className="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
+              <th
+                scope="row"
+                className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
+              >
+                Microsoft Surface Pro
+              </th>
+              <td className="px-6 py-4">White</td>
+              <td className="px-6 py-4">fghfg</td>
+              <td className="px-6 py-4">9</td>
+              <td className="px-6 py-4 text-center">
+                <a
+                  href="#"
+                  className="mx-3 font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                >
+                  Edit
+                </a>
+                <a
+                  href="#"
+                  className="mx-3 font-medium text-[red] hover:underline"
+                >
+                  Delete
+                </a>
+              </td>
+            </tr>
+            <tr className="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
+              <th
+                scope="row"
+                className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
+              >
+                Microsoft Surface Pro
+              </th>
+              <td className="px-6 py-4">White</td>
+              <td className="px-6 py-4">fghfg</td>
+              <td className="px-6 py-4">9</td>
+              <td className="px-6 py-4 text-center">
+                <a
+                  href="#"
+                  className="mx-3 font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                >
+                  Edit
+                </a>
+                <a
+                  href="#"
+                  className="mx-3 font-medium text-[red] hover:underline"
+                >
+                  Delete
+                </a>
+              </td>
+            </tr>
+            <tr className="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
+              <th
+                scope="row"
+                className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
+              >
+                Microsoft Surface Pro
+              </th>
+              <td className="px-6 py-4">White</td>
+              <td className="px-6 py-4">fghfg</td>
+              <td className="px-6 py-4">9</td>
+              <td className="px-6 py-4 text-center">
+                <a
+                  href="#"
+                  className="mx-3 font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                >
+                  Edit
+                </a>
+                <a
+                  href="#"
+                  className="mx-3 font-medium text-[red] hover:underline"
+                >
+                  Delete
+                </a>
+              </td>
+            </tr>
+            <tr className="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
+              <th
+                scope="row"
+                className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
+              >
+                Microsoft Surface Pro
+              </th>
+              <td className="px-6 py-4">White</td>
+              <td className="px-6 py-4">fghfg</td>
+              <td className="px-6 py-4">9</td>
+              <td className="px-6 py-4 text-center">
+                <a
+                  href="#"
+                  className="mx-3 font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                >
+                  Edit
+                </a>
+                <a
+                  href="#"
+                  className="mx-3 font-medium text-[red] hover:underline"
+                >
+                  Delete
+                </a>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>

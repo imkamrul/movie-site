@@ -47,32 +47,30 @@ const Header = () => {
     document.querySelectorAll(".nav__item").forEach((el) => {
       if (el.getAttribute("href") === path) el.style.color = "#10B981";
     });
-  }, []);
+  }, [path]);
   const headerRef = useRef(null);
   useEffect(() => {
-    const header = document.querySelector("header");
+    // const header = document.querySelector("header");
     // const HeaderBG = document.querySelector(".js-color-set");
 
     const js_ob = document.querySelector(".js_ob");
     const navObserverCallback = (watchEntry, navObserver) => {
       if (!watchEntry[0].isIntersecting) {
-        header.classList.add("active");
         const HeaderBG = document.querySelector(".js-color-set");
-        console.log(HeaderBG);
+        // console.log(HeaderBG);
         HeaderBG.classList.add("active");
       } else {
         const HeaderBG = document.querySelector(".js-color-set");
-        console.log(HeaderBG);
+        // console.log(HeaderBG);
         HeaderBG.classList.remove("active");
-        header.classList.remove("active");
       }
 
-      console.log(watchEntry[0].isIntersecting);
+      // console.log(watchEntry[0].isIntersecting);
     };
     const navObserverOptions = {
       root: null,
       threshold: 1,
-      rootMargin: "80px",
+      rootMargin: "1px",
     };
     const navObserver = new IntersectionObserver(
       navObserverCallback,
