@@ -3,7 +3,6 @@ import React from "react";
 import Rating from "react-rating";
 import Link from "next/link";
 const Card = ({ style }) => {
-  console.log(style);
   return (
     <div className={`w-full  ${style} px-2 py-4  group`}>
       <div className="relative overflow-hidden rounded-md   text-white">

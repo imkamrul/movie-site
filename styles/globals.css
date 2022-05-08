@@ -7,6 +7,9 @@
     @apply font-Poppins;
   }
 }
+.active {
+  background-color: #0a0e17 !important;
+}
 .nav__item {
   position: relative;
 }

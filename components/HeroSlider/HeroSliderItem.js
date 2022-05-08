@@ -20,7 +20,6 @@ const customStyles = {
   },
 };
 const HeroSliderItem = (props) => {
-  console.log(props);
   const { bgImage, heading, desc, image, isActive, bg_svg } = props;
 
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -48,7 +47,7 @@ const HeroSliderItem = (props) => {
       className="w-screen bg-slider"
     >
       <div className="container mx-auto">
-        <div className="h-auto lg:h-[90vh] py-5  container 3xl:mx-auto flex flex-col-reverse lg:flex-row items-center lg:px-[70px]">
+        <div className="h-auto lg:h-[100vh] py-5  container 3xl:mx-auto flex flex-col-reverse lg:flex-row items-center lg:px-[70px]">
           <div className="w-full lg:w-6/12  pl-3 z-[999]">
             <h2 className="text-white text-xl lg:text-6xl font-semibold">
               KING OF THE SKULL

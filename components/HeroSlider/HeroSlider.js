@@ -28,7 +28,7 @@ const HeroSlider = ({ heroSliderItem }) => {
 
   return (
     <>
-      <div className="relative h-full arrow-item 2xl:-mt-[25px]">
+      <div className="relative h-full arrow-item">
         <div className="flex justify-between items-center h-full arrow tr hero-slider">
           <div className="absolute z-50 top-0 left-6 h-full flex items-center justify-center tr">
             <div
