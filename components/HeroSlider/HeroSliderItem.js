@@ -61,10 +61,10 @@ const HeroSliderItem = (props) => {
               9.5 - 2010
             </p>
             <p className="pt-3 ">
-              <span className="bg-[#1F80DF] px-2 py-1 text-white text-base lg:text-lg rounded-sm mr-2">
+              <span className="bg-themeText px-2 py-1 text-white text-base lg:text-lg rounded-sm mr-2">
                 Action
               </span>
-              <span className="bg-[#1F80DF] px-2 py-1 text-white text-base lg:text-lg rounded-sm mr-2">
+              <span className="bg-themeText px-2 py-1 text-white text-base lg:text-lg rounded-sm mr-2">
                 Action
               </span>
             </p>
@@ -74,23 +74,24 @@ const HeroSliderItem = (props) => {
               layout Streamlab.
             </p>
             <p className="pt-3 text-white text-sm md:text-base">
-              <span className="text-[#1F80DF]">Cast</span> Anna Romanson, RObert
-              Romanson
+              <span className="text-themeText font-bold">Cast</span> Anna
+              Romanson, RObert Romanson
             </p>
             <p className="pt-3 text-white text-sm md:text-base">
-              <span className="text-[#1F80DF]">Language</span> Language
+              <span className="text-themeText font-bold">Language</span>{" "}
+              Language
             </p>
 
             <div className="flex mb-10 lg:mb-0 z-50">
               <a
                 href=""
-                className="bg-[#1F80DF] px-4 py-2 rounded-sm mt-5 inline-block text-white uppercase text-sm lg:text-lg w-6/12 lg:w-4/12 "
+                className="bg-themeBG hover:bg-themeText px-4 py-2 rounded-sm mt-5 inline-block text-white uppercase text-sm lg:text-lg w-6/12 lg:w-4/12 "
               >
                 <i className="fa-solid fa-play pr-2" /> Play Now
               </a>
               <a
                 href=""
-                className="bg-themeText px-4 py-2 rounded-sm mt-5 inline-block text-white uppercase  mx-5 text-sm lg:text-lg w-7/12 lg:w-4/12"
+                className="bg-themeBG hover:bg-themeText px-4 py-2 rounded-sm mt-5 inline-block text-white uppercase  mx-5 text-sm lg:text-lg w-7/12 lg:w-4/12"
               >
                 <i className="fa-solid fa-download pr-2" /> Download
               </a>

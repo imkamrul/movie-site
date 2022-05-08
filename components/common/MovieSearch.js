@@ -13,7 +13,7 @@ const MovieSearch = () => {
         <input
           type="text"
           placeholder="Movies name.."
-          className="w-8/12 lg:w-4/12 py-3 rounded pl-14 outline  outline-themeText"
+          className="w-8/12 lg:w-4/12 py-3 rounded pl-14 text-white outline-0  bg-transparent border-[1px] border-themeText placeholder:text-white"
         />
       </div>
       <div className="md:flex text-white pt-5 flex-wrap">

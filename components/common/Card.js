@@ -44,7 +44,9 @@ const Card = ({ style }) => {
       <h4 className=" text-xl py-3 ">
         <span className=" flex justify-between px-2">
           <span className="group-hover:text-themeText ease-out duration-700">
-            The Wariior Life
+            <Link href="/movie/1">
+              <a>The Wariior Life</a>
+            </Link>
           </span>
           <span>2020</span>
         </span>
