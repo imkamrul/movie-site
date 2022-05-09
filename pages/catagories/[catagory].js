@@ -7,7 +7,7 @@ import SmallCart from "../../components/common/SmallCart";
 const catagories = ({ data }) => {
   // console.log(data, params);
   return (
-    <section className="text-white container mx-auto py-10">
+    <section className="text-white container mx-auto py-10 mt-5 2xl:mt-10">
       <h4 className="text-white text-center text-3xl py-5">Hollywood</h4>
       <div className="flex md:pr-4 flex-wrap">
         <div className="w-full md:w-8/12 flex flex-wrap">
@@ -29,11 +29,11 @@ const catagories = ({ data }) => {
               <input
                 type="text"
                 placeholder="Movies name.."
-                className="w-full md:w-8/12 py-1  pl-4 text-black outline-hidden focus:outline-none"
+                className="w-full  py-1  pl-4 text-black outline-hidden focus:outline-none"
               />
               <button className="bg-themeText px-2 py-3">Search</button>
             </div>
-            <div className="overflow-y-auto overflow-hidden h-96 md:w-12/12 search-container mt-5">
+            <div className="overflow-y-auto overflow-hidden h-96 w-full search-container mt-5">
               <SmallCart />
               <SmallCart />
               <SmallCart />

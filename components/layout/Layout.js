@@ -4,7 +4,7 @@ import Header from "./Header";
 import { useRouter } from "next/router";
 const Layout = ({ children }) => {
   const router = useRouter();
-  const [nav, setNav] = useState(false);
+  const [nav, setNav] = useState(true);
 
   useEffect(() => {
     if (router.pathname === "/") {
