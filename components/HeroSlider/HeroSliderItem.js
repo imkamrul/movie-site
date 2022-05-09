@@ -107,7 +107,7 @@ const HeroSliderItem = (props) => {
                 className="rounded px-10  mt-5 block "
               />
               <span>
-                <a
+                {/* <a
                   id="play-video"
                   className="video-play-button cursor-pointer inline-block"
                   onClick={openModal}
@@ -120,6 +120,42 @@ const HeroSliderItem = (props) => {
                     alt="play-icon"
                     className="inline-block"
                   />
+                </a> */}
+                <a className="playBut " onClick={openModal}>
+                  <svg
+                    version="1.1"
+                    x="0px"
+                    y="0px"
+                    width="213.7px"
+                    height="213.7px"
+                    viewBox="0 0 213.7 213.7"
+                    enableBackground="new 0 0 213.7 213.7"
+                  >
+                    <polygon
+                      className="triangle"
+                      id="XMLID_18_"
+                      fill="none"
+                      strokeWidth="7"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeMiterlimit="10"
+                      points="
+            73.5,62.5 148.5,105.8 73.5,149.1 "
+                    ></polygon>
+
+                    <circle
+                      className="circle"
+                      id="XMLID_17_"
+                      fill="none"
+                      strokeWidth="7"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeMiterlimit="10"
+                      cx="106.8"
+                      cy="106.8"
+                      r="103.3"
+                    ></circle>
+                  </svg>
                 </a>
               </span>
             </div>

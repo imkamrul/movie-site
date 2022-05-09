@@ -155,3 +155,96 @@ body {
 .swiper {
   z-index: 0 !important;
 }
+
+/* svg animation  */
+.playBut svg {
+  width: 100px;
+  height: 100px;
+}
+.circle {
+  stroke: white;
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  transition: all 0.5s ease-in-out;
+  opacity: 0.3;
+}
+.playBut {
+  content: "";
+  position: absolute;
+  left: 45%;
+  top: 40%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 10px;
+  height: 10px;
+
+  transform: all 0.5s ease;
+  -webkit-transform: all 0.5s ease;
+  -moz-transform: all 0.5s ease;
+  -ms-transform: all 0.5s ease;
+  -o-transform: all 0.5s ease;
+}
+.playBut .triangle {
+  transition: all 0.7s ease-in-out;
+
+  stroke-dasharray: 240;
+  stroke-dashoffset: 480;
+  stroke: white;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -ms-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+}
+.playBut:hover .triangle {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  -webkit-animation: nudge 0.7s ease-in-out;
+  animation: nudge 0.7s ease-in-out;
+}
+@-webkit-keyframes nudge {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  70% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes nudge {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  70% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.playBut:hover .circle {
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+/* .search-img-icon span span img {
+  margin-top: 50px;
+  display: block;
+} */
