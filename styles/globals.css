@@ -185,6 +185,7 @@ body {
   -o-transform: all 0.5s ease;
 }
 .playBut .triangle {
+  cursor: pointer;
   transition: all 0.7s ease-in-out;
 
   stroke-dasharray: 240;

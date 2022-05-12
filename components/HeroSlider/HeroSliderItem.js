@@ -104,7 +104,7 @@ const HeroSliderItem = (props) => {
                 width={582}
                 height={330}
                 layout="responsive"
-                className="rounded px-10  mt-5 block "
+                className="rounded px-10  mt-5 block"
               />
               <span>
                 {/* <a

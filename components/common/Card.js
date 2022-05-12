@@ -57,9 +57,9 @@ const Card = ({ style }) => {
             emptySymbol="fa-regular fa-star text-[#F5C518]"
             fullSymbol="fa-solid fa-star text-[#F5C518]"
             readonly
-            initialRating={4.5}
+            initialRating={3.5}
           />
-          {"  "} 4.5
+          {"  "} 3.5
         </span>
       </div>
     </div>
