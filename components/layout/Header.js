@@ -4,12 +4,17 @@ import { useRouter } from "next/router";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { BurgerMenu, CrossIcon } from "../common/SVGIcons";
 import navData from "../../data/navbar.json";
+
 const Header = () => {
   const { logo, nav_link } = navData;
   const router = useRouter(null);
   const [navOpen, setNavOpen] = useState(false);
   const [model, setModel] = useState(null);
-  const [email, setEmail] = useState(null);
+  // console.log(localStorage.getItem("email"));
+  // useEffect(() => {
+  //   setEmail(localStorage.getItem("email"));
+  //   test = localStorage.getItem("email");
+  // }, [router.pathname]);
   const path = router.pathname;
   const switchSideDrawerHandler = useCallback(function (close) {
     if (screen.width > 900) return;
@@ -49,6 +54,7 @@ const Header = () => {
     });
   }, [path]);
   const headerRef = useRef(null);
+
   useEffect(() => {
     // const header = document.querySelector("header");
     const HeaderBG = document.querySelector(".js-color-set");
@@ -74,6 +80,7 @@ const Header = () => {
     );
     navObserver.observe(js_ob);
   }, []);
+
   return (
     <>
       <header ref={headerRef}>
@@ -144,6 +151,7 @@ const Header = () => {
                       </li>
                     );
                   })}
+
                   {/* <li
                     onClick={switchSideDrawerHandler.bind(this, navOpen)}
                     className="my-1 lg:mx-8"

@@ -84,13 +84,13 @@ const HeroSliderItem = (props) => {
             <div className="flex mb-10 lg:mb-0 z-50">
               <a
                 href=""
-                className="bg-themeBG hover:bg-themeText px-4 py-2 rounded-sm mt-5 inline-block text-white uppercase text-sm lg:text-lg w-6/12 lg:w-4/12 "
+                className="bg-themeBG hover:bg-themeText px-4 py-2 rounded-sm mt-5 inline-block text-white uppercase text-sm lg:text-lg w-6/12 lg:w-4/12  text-center"
               >
                 <i className="fa-solid fa-play pr-2" /> Play Now
               </a>
               <a
                 href=""
-                className="bg-themeBG hover:bg-themeText px-4 py-2 rounded-sm mt-5 inline-block text-white uppercase  mx-5 text-sm lg:text-lg w-7/12 lg:w-4/12"
+                className="bg-themeBG hover:bg-themeText px-4 py-2 rounded-sm mt-5 inline-block text-white uppercase  mx-5 text-sm lg:text-lg w-7/12 lg:w-4/12 text-center"
               >
                 <i className="fa-solid fa-download pr-2" /> Download
               </a>

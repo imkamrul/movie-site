@@ -18,6 +18,12 @@ const DashboardNav = () => {
           <i className="pr-3 fa-solid fa-clipboard-question" /> Request
         </a>
       </Link>
+      <Link href="/Dashboard/Slider">
+        <a className="block my-2 py-2 pl-5 group  hover:bg-[#0A0E17]">
+          <i className="pr-3 fa-solid fa-clipboard-question" />
+          Slider
+        </a>
+      </Link>
       <Link href="/Dashboard/User">
         <a className="block my-2 py-2 pl-5 group  hover:bg-[#0A0E17]">
           <i className="pr-3 fa-solid fa-user" /> User
