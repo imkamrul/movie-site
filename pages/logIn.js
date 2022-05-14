@@ -182,13 +182,4 @@ const Login = ({ providers, session, csrfToken }) => {
     </section>
   );
 };
-export async function getServerSideProps(context) {
-  return {
-    props: {
-      providers: await providers(context),
-      session: await getSession(context),
-      csrfToken: await csrfToken(context),
-    },
-  };
-}
 export default Login;
