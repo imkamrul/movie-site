@@ -6,9 +6,9 @@ const Videos = () => {
   return (
     <section className="flex">
       <DashboardNav />
-      <div className="w-10/12 pt-[10px]">
+      <div className="w-10/12 pt-[20px]">
         <div className="text-right">
-          <Link href="/videos-add">
+          <Link href="/Dashboard/Video-add">
             <a className="bg-themeText text-white text-lg px-3 py-2 rounded mx-5">
               {" "}
               Add New video

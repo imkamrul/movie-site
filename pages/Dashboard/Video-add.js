@@ -1,7 +1,8 @@
 import React from "react";
-import DashboardNav from "../components/Section/DashboardNav";
+
 import Link from "next/link";
 import { useForm } from "react-hook-form";
+import DashboardNav from "../../components/Section/DashboardNav";
 
 const VideoAdd = () => {
   const {
@@ -13,9 +14,9 @@ const VideoAdd = () => {
   return (
     <section className="flex">
       <DashboardNav />
-      <div className="w-10/12 pt-[10px]">
+      <div className="w-10/12 pt-[20px] ">
         <div className="text-right">
-          <Link href="/movie-collection">
+          <Link href="/Dashboard">
             <a className="bg-themeText text-white text-lg px-3 py-2 rounded mx-5">
               {" "}
               Back
