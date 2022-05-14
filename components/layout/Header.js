@@ -9,7 +9,7 @@ const Header = () => {
   const router = useRouter(null);
   const [navOpen, setNavOpen] = useState(false);
   const [model, setModel] = useState(null);
-
+  const [email, setEmail] = useState(null);
   const path = router.pathname;
   const switchSideDrawerHandler = useCallback(function (close) {
     if (screen.width > 900) return;

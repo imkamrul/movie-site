@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { FacebookIcon, GoogleIcon } from "../components/common/SVGIcons";
-import { providers, getSession, csrfToken, signIn } from "next-auth/client";
-import Router from "next/router";
-const Login = ({ providers, session, csrfToken }) => {
+const Login = () => {
   const {
     register,
     handleSubmit,
@@ -20,53 +17,16 @@ const Login = ({ providers, session, csrfToken }) => {
     console.log(data);
     setSignUp(data);
   };
-  useEffect(() => {
-    if (session) return Router.push("/");
-  }, [session]);
 
-  useEffect(() => {
-    if (Router.query.error) {
-      toast.error(Router.query.error);
-      return Router.push("/login");
-    }
-  }, []);
-  const UserLogin = async (method, options) => {
-    if (method === "credentials") {
-      const res = await signIn(method, options);
-      console.log(res);
-      if (res.error) {
-        if (res.error === "Success! Check your email.") {
-          signIn("email", { email: options.email });
-          return toast.success(res.error);
-        }
-        return toast.error(res.error);
-      }
-      return Router.push("/logIn");
-    } else {
-      const res = await signIn(method);
-    }
-  };
   const onSubmit = (data) => {
     if (signUp) {
       if (data.password !== data.cpassword) {
         error("password does not match");
       } else {
-        handleSubmit("credentials", {
-          redirect: false,
-          email: data.email,
-          password: data.password,
-        });
       }
     } else {
-      UserLogin("credentials", {
-        redirect: false,
-        email: data.email,
-        password: data.password,
-      });
     }
   };
-  if (session) return null;
-
   return (
     <section>
       <div className="h-[100vh] w-[100wh] login-bg"></div>
@@ -76,17 +36,11 @@ const Login = ({ providers, session, csrfToken }) => {
             {signUp ? "Sign Up" : "Sign In"} With
           </h4>
           <div className="text-center py-5 flex justify-between w-8/12 mx-auto">
-            <button
-              className="bg-[#3f9fff] text-white px-3 py-2 rounded mx-3 shadow-lg flex items-center"
-              onClick={() => UserLogin("facebook", "options")}
-            >
+            <button className="bg-[#3f9fff] text-white px-3 py-2 rounded mx-3 shadow-lg flex items-center">
               <FacebookIcon />
               <span className="pl-3 text-xl"> Facebook</span>
             </button>
-            <button
-              className="px-6 py-3 rounded mx-3 shadow-lg flex items-center"
-              onClick={() => UserLogin("google", "options")}
-            >
+            <button className="px-6 py-3 rounded mx-3 shadow-lg flex items-center">
               <GoogleIcon /> <span className="pl-3 text-xl"> Google</span>
             </button>
           </div>
