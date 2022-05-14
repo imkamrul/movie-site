@@ -1,7 +1,7 @@
 import React from "react";
-import DashboardNav from "../components/Section/DashboardNav";
+import DashboardNav from "../../components/Section/DashboardNav";
 
-const RequestCollection = () => {
+const Request = () => {
   return (
     <section className="flex">
       <DashboardNav />
@@ -12,4 +12,4 @@ const RequestCollection = () => {
   );
 };
 
-export default RequestCollection;
+export default Request;

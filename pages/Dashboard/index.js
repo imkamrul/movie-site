@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import DashboardNav from "../components/Section/DashboardNav";
+import React from "react";
+import DashboardNav from "../../components/Section/DashboardNav";
 import Link from "next/link";
-import Table from "../components/common/Table";
-
-const MovieCollection = () => {
+import Table from "../../components/common/Table";
+const Videos = () => {
   return (
     <section className="flex">
       <DashboardNav />
@@ -25,4 +24,4 @@ const MovieCollection = () => {
   );
 };
 
-export default MovieCollection;
+export default Videos;

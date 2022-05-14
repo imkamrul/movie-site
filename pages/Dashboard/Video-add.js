@@ -2,7 +2,8 @@ import React from "react";
 import DashboardNav from "../components/Section/DashboardNav";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
-const VideosAdd = () => {
+
+const VideoAdd = () => {
   const {
     register,
     handleSubmit,
@@ -251,5 +252,4 @@ const VideosAdd = () => {
     </section>
   );
 };
-
-export default VideosAdd;
+export default VideoAdd;

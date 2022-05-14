@@ -27,23 +27,6 @@
         }
       ]
     },
-    {
-      "text": "Series",
-      "submenu": [
-        {
-          "text": "Bangla",
-          "link": "/bangla"
-        },
-        {
-          "text": "Hindi",
-          "link": "/hindi"
-        },
-        {
-          "text": "English",
-          "link": "/english"
-        }
-      ]
-    },
 
     {
       "text": "Request",
@@ -51,7 +34,7 @@
     },
     {
       "text": "Dashboard",
-      "link": "/dashboard"
+      "link": "/Dashboard"
     }
   ]
 }
