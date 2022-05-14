@@ -144,11 +144,11 @@ const Header = () => {
                       </li>
                     );
                   })}
-                  <li
+                  {/* <li
                     onClick={switchSideDrawerHandler.bind(this, navOpen)}
                     className="my-1 lg:mx-8"
                   >
-                    <Link href="/logIn">
+                    <Link href="/login">
                       <a
                         className="bg-[#00B67A] text-white w-[66px] text-center rounded-md px-3 py-2"
                         id="blog"
@@ -156,7 +156,7 @@ const Header = () => {
                         Sign in
                       </a>
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </nav>
