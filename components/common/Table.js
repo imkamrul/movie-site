@@ -1,14 +1,17 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React from "react";
+
 import Swal from "sweetalert2";
 import { BASE_URL } from "../../util/Url";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-const Table = ({ content, setData }) => {
+import Link from "next/link";
+
+const Table = ({ content, setData, link, view }) => {
+  console.log(link, view);
   const error = (text) => toast.error(text);
   const success = (text) => toast.success(text);
   const info = (text) => toast.info(text);
-  console.log(setData);
   const handleDelete = (id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -20,13 +23,19 @@ const Table = ({ content, setData }) => {
       confirmButtonText: "Yes, delete it!",
     }).then(async (result) => {
       if (result.isConfirmed) {
-        const result = await axios.delete(`${BASE_URL}/slider/${id}`);
+        const result = await axios.delete(`${BASE_URL}/${link}/${id}`);
         if (result.data.deletedCount === 1) {
           const newData = content.filter((item) => item._id !== id);
           setData(newData);
-          success("Success, Slider has been deleted");
+          success(
+            `Success,${
+              link === "videos" ? "Video" : "Slider"
+            }  has been deleted`
+          );
         } else {
-          error("Error, Cannot deleted slider");
+          error(
+            `Error, Cannot deleted ${link === "videos" ? "Video" : "Slider"}`
+          );
         }
       } else {
         info("Delete Cancel");
@@ -75,18 +84,25 @@ const Table = ({ content, setData }) => {
                   <td className="px-6 py-4">{item.date}</td>
                   <td className="px-6 py-4">{item.rating}</td>
                   <td className="px-6 py-4 text-center">
+                    {/* {view && (
+                      <Link href={`/${link}/${item._id}`}>
+                        <a className="mx-3 font-medium text-white hover:underline">
+                          View
+                        </a>
+                      </Link>
+                    )} */}
+                    <Link href={`/Dashboard/${link}/${item._id}`}>
+                      <a className="mx-3 font-medium text-themeText hover:underline">
+                        Edit
+                      </a>
+                    </Link>
+
                     <a
-                      href="#"
-                      className="mx-3 font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                    >
-                      Edit
-                    </a>
-                    <p
                       onClick={() => handleDelete(item._id)}
-                      className="mx-3 font-medium text-[red] hover:underline"
+                      className="mx-3 font-medium text-[red] hover:underline cursor-pointer"
                     >
                       Delete
-                    </p>
+                    </a>
                   </td>
                 </tr>
               );

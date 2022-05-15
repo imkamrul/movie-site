@@ -1,10 +1,9 @@
+import Table from "../../../components/common/Table";
+import DashboardNav from "../../../components/Section/DashboardNav";
+import { BASE_URL } from "../../../util/Url";
 import React, { useState } from "react";
-import DashboardNav from "../../components/Section/DashboardNav";
 import Link from "next/link";
-import Table from "../../components/common/Table";
-import { BASE_URL } from "../../util/Url";
-import axios from "axios";
-const Slider = ({ data }) => {
+const Home = ({ data }) => {
   const [sliderData, setSliderData] = useState(data);
   const handleAllSliderButton = () => {
     setSliderData(data);
@@ -25,7 +24,7 @@ const Slider = ({ data }) => {
       <DashboardNav />
       <div className="w-10/12 pt-[20px]">
         <div className="text-right">
-          <Link href="/Dashboard/Slider-add">
+          <Link href="/Dashboard/Slider/add">
             <a className="bg-themeText text-white text-lg px-3 py-2 rounded mx-5">
               Add Slider
             </a>
@@ -52,13 +51,12 @@ const Slider = ({ data }) => {
           </button>
         </div>
         <div className=" px-[40px] my-10">
-          <Table content={sliderData} setData={setSliderData} />
+          <Table content={sliderData} setData={setSliderData} link="Slider" />
         </div>
       </div>
     </section>
   );
 };
-// http://localhost:5000/slider?catagory=Hero_Slider
 export async function getStaticProps() {
   const res = await fetch(`${BASE_URL}/slider`);
   const data = await res.json();
@@ -67,5 +65,4 @@ export async function getStaticProps() {
     props: { data },
   };
 }
-
-export default Slider;
+export default Home;

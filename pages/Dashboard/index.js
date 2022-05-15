@@ -1,7 +1,6 @@
 import React from "react";
 import DashboardNav from "../../components/Section/DashboardNav";
 import Link from "next/link";
-import Table from "../../components/common/Table";
 const Videos = () => {
   return (
     <section className="flex">
@@ -16,9 +15,7 @@ const Videos = () => {
           </Link>
         </div>
 
-        <div className=" px-[40px] my-10">
-          <Table />
-        </div>
+        <div className=" px-[40px] my-10"></div>
       </div>
     </section>
   );
