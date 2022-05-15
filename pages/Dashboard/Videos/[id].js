@@ -310,8 +310,6 @@ const MovieEdit = ({ data }) => {
                     className="py-2 rounded text-black pl-3 outline outline-offset-2 outline-1  w-full"
                     {...register("language", {
                       required: true,
-                      max: 10,
-                      min: 0,
                     })}
                   />
                   {errors.language && (
@@ -330,8 +328,6 @@ const MovieEdit = ({ data }) => {
                     className="py-2 rounded text-black pl-3 outline outline-offset-2 outline-1  w-full"
                     {...register("trailer", {
                       required: true,
-                      max: 10,
-                      min: 0,
                     })}
                   />
                   {errors.trailer && (

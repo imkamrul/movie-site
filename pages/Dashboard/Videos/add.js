@@ -263,7 +263,7 @@ const Add = () => {
                   <input
                     type="text"
                     className="py-2 rounded text-black pl-3 outline outline-offset-2 outline-1  w-full"
-                    {...register("rating", { required: true, max: 10, min: 0 })}
+                    {...register("language", { required: true })}
                   />
                   {errors.language && (
                     <p className="text-[red] text-xs py-2">
@@ -278,7 +278,9 @@ const Add = () => {
                   <input
                     type="text"
                     className="py-2 rounded text-black pl-3 outline outline-offset-2 outline-1  w-full"
-                    {...register("rating", { required: true, max: 10, min: 0 })}
+                    {...register("trailer", {
+                      required: true,
+                    })}
                   />
                   {errors.trailer && (
                     <p className="text-[red] text-xs py-2">
