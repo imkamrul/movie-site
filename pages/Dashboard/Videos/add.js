@@ -257,7 +257,36 @@ const Add = () => {
                   )}
                 </div>
               </div>
-
+              <div className="flex py-2">
+                <p className="py-2 w-3/12">Language</p>
+                <div className="w-7/12">
+                  <input
+                    type="text"
+                    className="py-2 rounded text-black pl-3 outline outline-offset-2 outline-1  w-full"
+                    {...register("rating", { required: true, max: 10, min: 0 })}
+                  />
+                  {errors.language && (
+                    <p className="text-[red] text-xs py-2">
+                      This field is required
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="flex py-2">
+                <p className="py-2 w-3/12">Trailer</p>
+                <div className="w-7/12">
+                  <input
+                    type="text"
+                    className="py-2 rounded text-black pl-3 outline outline-offset-2 outline-1  w-full"
+                    {...register("rating", { required: true, max: 10, min: 0 })}
+                  />
+                  {errors.trailer && (
+                    <p className="text-[red] text-xs py-2">
+                      This field is required
+                    </p>
+                  )}
+                </div>
+              </div>
               <div className="text-center">
                 <input
                   type="submit"

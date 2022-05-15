@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import DashboardNav from "../../../components/Section/DashboardNav";
 import Link from "next/link";
-import { BASE_URL } from "../../../util/Url";
 import Table from "../../../components/common/Table";
+import { BASE_URL } from "../../../util/Url";
 const Home = ({ data }) => {
   const [videos, setVideos] = useState(data);
   console.log(data);
@@ -24,7 +24,7 @@ const Home = ({ data }) => {
             content={videos}
             setData={setVideos}
             view={true}
-            link="videos"
+            link="Videos"
           />
         </div>
       </div>
