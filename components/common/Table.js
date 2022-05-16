@@ -107,7 +107,7 @@ const Table = ({ content, setData, link, view, type }) => {
                     </th>
                   ) : (
                     <th scope="col" className="px-6 py-3">
-                      \ <td className="px-6 py-4">{item.catagory}</td>
+                      <td className="px-6 py-4">{item.catagory}</td>
                     </th>
                   )}
 
