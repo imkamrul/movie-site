@@ -4,12 +4,15 @@ import MovieSection from "../components/common/MovieSection";
 import HeroSlider from "../components/HeroSlider/HeroSlider";
 import SingleSlider from "../components/singleSlider/SingleSlider";
 import homePageData from "../data/home.json";
-const index = ({ pageData }) => {
+import { BASE_URL } from "../util/Url";
+const index = ({ pageData, videos }) => {
+  console.log(pageData);
   const { hero_slider } = pageData;
+
   return (
     <>
       <HeroSlider heroSliderItem={hero_slider} />
-      <MovieSearch />
+      <MovieSearch content={videos} />
       <MovieSection />
       <MovieSection />
       <MovieSection />
@@ -21,9 +24,20 @@ const index = ({ pageData }) => {
 
 export default index;
 export async function getStaticProps() {
+  const res = await fetch(`${BASE_URL}/videos`);
+  const data = await res.json();
   return {
     props: {
       pageData: homePageData,
+      videos: data,
     },
   };
 }
+// export async function getStaticProps() {
+//   const res = await fetch(`${BASE_URL}/videos`);
+//   const data = await res.json();
+
+//   return {
+//     props: { data },
+//   };
+// }
