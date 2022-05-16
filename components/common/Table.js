@@ -7,7 +7,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 
-const Table = ({ content, setData, link, view }) => {
+const Table = ({ content, setData, link, view, type }) => {
+  console.log(type, view);
   const error = (text) => toast.error(text);
   const success = (text) => toast.success(text);
   const info = (text) => toast.info(text);
@@ -51,9 +52,21 @@ const Table = ({ content, setData, link, view }) => {
               <th scope="col" className="px-6 py-3">
                 Movie Name
               </th>
-              <th scope="col" className="px-6 py-3">
-                Catagory
-              </th>
+              {type && (
+                <th scope="col" className="px-6 py-3">
+                  Type
+                </th>
+              )}
+              {type ? (
+                <th scope="col" className="px-6 py-3">
+                  Genre
+                </th>
+              ) : (
+                <th scope="col" className="px-6 py-3">
+                  Catagory
+                </th>
+              )}
+
               <th scope="col" className="px-6 py-3">
                 Year
               </th>
@@ -79,7 +92,25 @@ const Table = ({ content, setData, link, view }) => {
                   >
                     {item.name}
                   </th>
-                  <td className="px-6 py-4">{item.catagory}</td>
+                  {type && (
+                    <th scope="col" className="px-6 py-3">
+                      {item.type}
+                    </th>
+                  )}
+                  {type ? (
+                    <th scope="col" className="px-6 py-3">
+                      {item.genre?.map((type, index) => (
+                        <p className="inline-block pr-2" key={index}>
+                          {type} {item.genre.length - 1 !== index && ","}
+                        </p>
+                      ))}
+                    </th>
+                  ) : (
+                    <th scope="col" className="px-6 py-3">
+                      \ <td className="px-6 py-4">{item.catagory}</td>
+                    </th>
+                  )}
+
                   <td className="px-6 py-4">{item.date}</td>
                   <td className="px-6 py-4">{item.rating}</td>
                   <td className="px-6 py-4 text-center">

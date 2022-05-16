@@ -57,6 +57,7 @@ const Home = ({ data }) => {
             setData={setVideos}
             view={true}
             link="Videos"
+            type={true}
           />
         </div>
       </div>
