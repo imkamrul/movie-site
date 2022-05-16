@@ -86,31 +86,31 @@ const Table = ({ content, setData, link, view, type }) => {
                   key={item._id}
                   className="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700"
                 >
-                  <th
+                  <td
                     scope="row"
                     className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
                   >
                     {item.name}
-                  </th>
+                  </td>
                   {type ? (
-                    <th scope="col" className="px-6 py-3">
+                    <td scope="col" className="px-6 py-3">
                       {item.type}
-                    </th>
+                    </td>
                   ) : (
                     ""
                   )}
                   {type ? (
-                    <th scope="col" className="px-6 py-3">
+                    <td scope="col" className="px-6 py-3">
                       {item.genre?.map((type, index) => (
                         <span className="inline-block pr-2" key={index}>
                           {type} {item.genre.length - 1 !== index && ","}
                         </span>
                       ))}
-                    </th>
+                    </td>
                   ) : (
-                    <th scope="col" className="px-6 py-3">
+                    <td scope="col" className="px-6 py-3">
                       {item.catagory}
-                    </th>
+                    </td>
                   )}
 
                   <td className="px-6 py-4">{item.date}</td>
