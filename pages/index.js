@@ -6,7 +6,6 @@ import SingleSlider from "../components/singleSlider/SingleSlider";
 import homePageData from "../data/home.json";
 import { BASE_URL } from "../util/Url";
 const index = ({ pageData, videos }) => {
-  console.log(pageData);
   const { hero_slider } = pageData;
 
   return (

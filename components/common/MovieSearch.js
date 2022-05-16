@@ -9,11 +9,12 @@ const MovieSearch = ({ content }) => {
   const [loading, setLoading] = useState(false);
   const handleMovieSearch = async (e) => {
     const search = e.target.value;
-    console.log(search);
-    const matchSearch = content.filter((item) =>
-      item.name.toLowerCase().includes(search.toLowerCase())
-    );
-    setResult(matchSearch);
+    if (search.length) {
+      const matchSearch = content.filter((item) =>
+        item.name.toLowerCase().includes(search.toLowerCase())
+      );
+      setResult(matchSearch);
+    }
   };
   console.log(result);
   return (
