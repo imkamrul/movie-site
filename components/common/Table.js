@@ -29,12 +29,12 @@ const Table = ({ content, setData, link, view }) => {
           setData(newData);
           success(
             `Success,${
-              link === "videos" ? "Video" : "Slider"
+              link === "Videos" ? "Video" : "Slider"
             }  has been deleted`
           );
         } else {
           error(
-            `Error, Cannot deleted ${link === "videos" ? "Video" : "Slider"}`
+            `Error, Cannot deleted ${link === "Videos" ? "Video" : "Slider"}`
           );
         }
       } else {

@@ -32,11 +32,3 @@ export async function getStaticProps() {
     },
   };
 }
-// export async function getStaticProps() {
-//   const res = await fetch(`${BASE_URL}/videos`);
-//   const data = await res.json();
-
-//   return {
-//     props: { data },
-//   };
-// }
