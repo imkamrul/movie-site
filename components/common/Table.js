@@ -92,22 +92,24 @@ const Table = ({ content, setData, link, view, type }) => {
                   >
                     {item.name}
                   </th>
-                  {type && (
+                  {type ? (
                     <th scope="col" className="px-6 py-3">
                       {item.type}
                     </th>
+                  ) : (
+                    ""
                   )}
                   {type ? (
                     <th scope="col" className="px-6 py-3">
                       {item.genre?.map((type, index) => (
-                        <p className="inline-block pr-2" key={index}>
+                        <span className="inline-block pr-2" key={index}>
                           {type} {item.genre.length - 1 !== index && ","}
-                        </p>
+                        </span>
                       ))}
                     </th>
                   ) : (
                     <th scope="col" className="px-6 py-3">
-                      <td className="px-6 py-4">{item.catagory}</td>
+                      {item.catagory}
                     </th>
                   )}
 
