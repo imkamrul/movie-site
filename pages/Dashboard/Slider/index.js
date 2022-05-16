@@ -57,7 +57,7 @@ const Home = ({ data }) => {
     </section>
   );
 };
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch(`${BASE_URL}/slider`);
   const data = await res.json();
 

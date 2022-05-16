@@ -467,16 +467,16 @@ const MovieEdit = ({ data }) => {
     </section>
   );
 };
-export async function getStaticPaths() {
-  const res = await fetch(`${BASE_URL}/videos`);
-  const data = await res.json();
-  const paths = data.map((item) => ({
-    params: { id: item._id },
-  }));
-  return { paths, fallback: false };
-}
+// export async function getStaticPaths() {
+//   const res = await fetch(`${BASE_URL}/videos`);
+//   const data = await res.json();
+//   const paths = data.map((item) => ({
+//     params: { id: item._id },
+//   }));
+//   return { paths, fallback: false };
+// }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   console.log(params);
   const res = await fetch(`${BASE_URL}/videos/${params.id}`);
   const data = await res.json();
