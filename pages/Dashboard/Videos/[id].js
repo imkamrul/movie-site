@@ -147,7 +147,8 @@ const MovieEdit = ({ data }) => {
                     className="py-2 rounded text-black pl-3 outline outline-offset-2 outline-1  w-full"
                   >
                     <option value="Bollywood">Bollywood</option>
-                    <option value="Holywood">Hollywood</option>
+                    <option value="Hollywood">Hollywood</option>
+                    <option value="Tollywood">Tollywood</option>
                   </select>
 
                   {errors.type && (
