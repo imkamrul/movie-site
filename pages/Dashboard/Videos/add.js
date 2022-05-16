@@ -19,7 +19,8 @@ const Add = () => {
     console.log(data);
     setLoading(true);
     try {
-      const res = await axios.post(`${BASE_URL}/video`, data);
+      const res = await axios.post(`${BASE_URL}/videos`, data);
+      console.log(res);
       if (res.status === 200) {
         setLoading(false);
         success("Success, New video added");
@@ -197,14 +198,65 @@ const Add = () => {
                   )}
                 </div>
               </div>
+
               <div className="flex py-2">
-                <p className="py-2 w-3/12">Genre</p>
+                <p className="py-2 w-3/12">Movie Type</p>
+
                 <div className="w-7/12">
-                  <input
-                    type="text"
-                    className="py-2 rounded text-black pl-3 outline outline-offset-2 outline-1  w-full"
-                    {...register("genre", { required: true })}
-                  />
+                  <label className="inline-flex items-center pr-6">
+                    <input
+                      type="checkbox"
+                      value="Action"
+                      {...register("genre", { required: true })}
+                    />
+                    <span className="pl-2">Action</span>
+                  </label>
+
+                  <label className="inline-flex items-center pr-6">
+                    <input
+                      type="checkbox"
+                      value="Romantic"
+                      {...register("genre", { required: true })}
+                    />
+                    <span className="pl-2">Romantic</span>
+                  </label>
+
+                  <label className="inline-flex items-center pr-3">
+                    <input
+                      type="checkbox"
+                      value="Adventure"
+                      {...register("genre", { required: true })}
+                    />
+                    <span className="ml-2">Adventure</span>
+                  </label>
+
+                  <label className="inline-flex items-center pr-3">
+                    <input
+                      type="checkbox"
+                      value="Thriller"
+                      {...register("genre", { required: true })}
+                    />
+                    <span className="ml-2">Thriller</span>
+                  </label>
+
+                  <label className="inline-flex items-center pr-3">
+                    <input
+                      type="checkbox"
+                      value="Sci-fi"
+                      {...register("genre", { required: true })}
+                    />
+                    <span className="ml-2">Sci-fi</span>
+                  </label>
+
+                  <label className="inline-flex items-center pr-3">
+                    <input
+                      type="checkbox"
+                      value="Comedy"
+                      {...register("genre", { required: true })}
+                    />
+                    <span className="ml-2">Comedy</span>
+                  </label>
+
                   {errors.genre && (
                     <p className="text-[red] text-xs py-2">
                       This field is required
@@ -283,6 +335,40 @@ const Add = () => {
                     })}
                   />
                   {errors.trailer && (
+                    <p className="text-[red] text-xs py-2">
+                      This field is required
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="flex py-2">
+                <p className="py-2 w-3/12">Subtitle</p>
+                <div className="w-7/12">
+                  <input
+                    type="text"
+                    className="py-2 rounded text-black pl-3 outline outline-offset-2 outline-1  w-full"
+                    {...register("subtitle", {
+                      required: true,
+                    })}
+                  />
+                  {errors.subtitle && (
+                    <p className="text-[red] text-xs py-2">
+                      This field is required
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="flex py-2">
+                <p className="py-2 w-3/12">Quality</p>
+                <div className="w-7/12">
+                  <input
+                    type="text"
+                    className="py-2 rounded text-black pl-3 outline outline-offset-2 outline-1  w-full"
+                    {...register("quality", {
+                      required: true,
+                    })}
+                  />
+                  {errors.quality && (
                     <p className="text-[red] text-xs py-2">
                       This field is required
                     </p>

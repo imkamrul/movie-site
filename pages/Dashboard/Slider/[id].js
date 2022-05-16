@@ -434,7 +434,42 @@ const SliderEdit = ({ data }) => {
                   )}
                 </div>
               </div>
-
+              <div className="flex py-2">
+                <p className="py-2 w-3/12">Subtitle</p>
+                <div className="w-7/12">
+                  <input
+                    type="text"
+                    defaultValue={data.subtitle}
+                    className="py-2 rounded text-black pl-3 outline outline-offset-2 outline-1  w-full"
+                    {...register("subtitle", {
+                      required: true,
+                    })}
+                  />
+                  {errors.subtitle && (
+                    <p className="text-[red] text-xs py-2">
+                      This field is required
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="flex py-2">
+                <p className="py-2 w-3/12">Quality</p>
+                <div className="w-7/12">
+                  <input
+                    type="text"
+                    defaultValue={data.quality}
+                    className="py-2 rounded text-black pl-3 outline outline-offset-2 outline-1  w-full"
+                    {...register("quality", {
+                      required: true,
+                    })}
+                  />
+                  {errors.quality && (
+                    <p className="text-[red] text-xs py-2">
+                      This field is required
+                    </p>
+                  )}
+                </div>
+              </div>
               <div className="text-center">
                 <input
                   type="submit"

@@ -238,14 +238,130 @@ const MovieEdit = ({ data }) => {
                 </div>
               </div>
               <div className="flex py-2">
-                <p className="py-2 w-3/12">Genre</p>
+                <p className="py-2 w-3/12">Movie Type</p>
+
                 <div className="w-7/12">
-                  <input
-                    type="text"
-                    defaultValue={data.genre}
-                    className="py-2 rounded text-black pl-3 outline outline-offset-2 outline-1  w-full"
-                    {...register("genre", { required: true })}
-                  />
+                  {data.genre.includes("Action") ? (
+                    <label className="inline-flex items-center pr-6">
+                      <input
+                        type="checkbox"
+                        value="Action"
+                        defaultChecked
+                        {...register("genre", { required: true })}
+                      />
+                      <span className="pl-2">Action</span>
+                    </label>
+                  ) : (
+                    <label className="inline-flex items-center pr-6">
+                      <input
+                        type="checkbox"
+                        value="Action"
+                        {...register("genre", { required: true })}
+                      />
+                      <span className="pl-2">Action</span>
+                    </label>
+                  )}
+                  {data.genre.includes("Romantic") ? (
+                    <label className="inline-flex items-center pr-6">
+                      <input
+                        type="checkbox"
+                        value="Romantic"
+                        defaultChecked
+                        {...register("genre", { required: true })}
+                      />
+                      <span className="pl-2">Romantic</span>
+                    </label>
+                  ) : (
+                    <label className="inline-flex items-center pr-6">
+                      <input
+                        type="checkbox"
+                        value="Romantic"
+                        {...register("genre", { required: true })}
+                      />
+                      <span className="pl-2">Romantic</span>
+                    </label>
+                  )}
+
+                  {data.genre.includes("Adventure") ? (
+                    <label className="inline-flex items-center pr-3">
+                      <input
+                        type="checkbox"
+                        value="Adventure"
+                        defaultChecked
+                        {...register("genre", { required: true })}
+                      />
+                      <span className="ml-2">Adventure</span>
+                    </label>
+                  ) : (
+                    <label className="inline-flex items-center pr-3">
+                      <input
+                        type="checkbox"
+                        value="Adventure"
+                        {...register("genre", { required: true })}
+                      />
+                      <span className="ml-2">Adventure</span>
+                    </label>
+                  )}
+                  {data.genre.includes("Adventure") ? (
+                    <label className="inline-flex items-center pr-3">
+                      <input
+                        type="checkbox"
+                        value="Thriller"
+                        defaultChecked
+                        {...register("genre", { required: true })}
+                      />
+                      <span className="ml-2">Thriller</span>
+                    </label>
+                  ) : (
+                    <label className="inline-flex items-center pr-3">
+                      <input
+                        type="checkbox"
+                        value="Thriller"
+                        {...register("genre", { required: true })}
+                      />
+                      <span className="ml-2">Thriller</span>
+                    </label>
+                  )}
+                  {data.genre.includes("Sci-fi") ? (
+                    <label className="inline-flex items-center pr-3">
+                      <input
+                        type="checkbox"
+                        value="Sci-fi"
+                        defaultChecked
+                        {...register("genre", { required: true })}
+                      />
+                      <span className="ml-2">Sci-fi</span>
+                    </label>
+                  ) : (
+                    <label className="inline-flex items-center pr-3">
+                      <input
+                        type="checkbox"
+                        value="Sci-fi"
+                        {...register("genre", { required: true })}
+                      />
+                      <span className="ml-2">Sci-fi</span>
+                    </label>
+                  )}
+                  {data.genre.includes("Comedy") ? (
+                    <label className="inline-flex items-center pr-3">
+                      <input
+                        type="checkbox"
+                        value="Comedy"
+                        defaultChecked
+                        {...register("genre", { required: true })}
+                      />
+                      <span className="ml-2">Comedy</span>
+                    </label>
+                  ) : (
+                    <label className="inline-flex items-center pr-3">
+                      <input
+                        type="checkbox"
+                        value="Comedy"
+                        {...register("genre", { required: true })}
+                      />
+                      <span className="ml-2">Comedy</span>
+                    </label>
+                  )}
                   {errors.genre && (
                     <p className="text-[red] text-xs py-2">
                       This field is required
