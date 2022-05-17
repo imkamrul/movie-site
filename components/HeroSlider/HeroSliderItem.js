@@ -20,6 +20,7 @@ const customStyles = {
   },
 };
 const HeroSliderItem = (props) => {
+  // console.log(props);
   const { bgImage, heading, desc, image, isActive, bg_svg } = props;
 
   const [modalIsOpen, setIsOpen] = useState(false);

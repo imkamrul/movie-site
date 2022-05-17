@@ -14,7 +14,6 @@ const Login = () => {
   const [signUp, setSignUp] = useState(false);
 
   const handleSignUpOption = (data) => {
-    console.log(data);
     setSignUp(data);
   };
 

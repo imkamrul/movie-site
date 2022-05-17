@@ -8,7 +8,6 @@ import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 
 const Table = ({ content, setData, link, view, type }) => {
-  console.log(type, view);
   const error = (text) => toast.error(text);
   const success = (text) => toast.success(text);
   const info = (text) => toast.info(text);

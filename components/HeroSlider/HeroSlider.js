@@ -84,7 +84,7 @@ const HeroSlider = ({ heroSliderItem }) => {
           }}
           isActive
         >
-          {heroSliderItem.map(({ bgImage, heading, desc, image, bgColor }) => (
+          {heroSliderItem.map(({ bgImage, heading, desc, image }) => (
             <SwiperSlide key={heading}>
               {({ isActive }) => {
                 return (

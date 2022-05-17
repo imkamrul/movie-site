@@ -8,7 +8,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/router";
 const MovieEdit = ({ data }) => {
-  console.log(data);
   const error = (text) => toast.error(text);
   const success = (text) => toast.success(text);
   const [loading, setLoading] = useState(false);
@@ -18,11 +17,10 @@ const MovieEdit = ({ data }) => {
     formState: { errors },
   } = useForm();
   const onSubmit = async (value) => {
-    console.log(value);
     setLoading(true);
     try {
       const res = await axios.put(`${BASE_URL}/videos/${data._id}`, value);
-      console.log(res);
+
       if (res.data.matchedCount == 1) {
         setLoading(false);
         success("Success, Video Data Update");
@@ -478,7 +476,6 @@ const MovieEdit = ({ data }) => {
 // }
 
 export async function getServerSideProps({ params }) {
-  console.log(params);
   const res = await fetch(`${BASE_URL}/videos/${params.id}`);
   const data = await res.json();
   return {

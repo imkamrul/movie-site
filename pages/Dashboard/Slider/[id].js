@@ -19,11 +19,10 @@ const SliderEdit = ({ data }) => {
   } = useForm();
   const [loading, setLoading] = useState(false);
   const onSubmit = async (value) => {
-    console.log(value);
     setLoading(true);
     try {
       const res = await axios.put(`${BASE_URL}/slider/${data._id}`, value);
-      console.log(res);
+
       if (res.data.matchedCount == 1) {
         setLoading(false);
         success("Success, Slider Data Update");

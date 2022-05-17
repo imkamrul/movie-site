@@ -20,7 +20,6 @@ const Movie = ({ data }) => {
 // }
 
 export async function getServerSideProps({ params }) {
-  console.log(params);
   // const res = await fetch("https://kamrul-hasan01.github.io/api/pages.json");
   // const data = await res.json();
   return {

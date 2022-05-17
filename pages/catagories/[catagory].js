@@ -5,7 +5,6 @@ import Card from "../../components/common/Card";
 import SmallCart from "../../components/common/SmallCart";
 
 const catagories = ({ data }) => {
-  // console.log(data, params);
   return (
     <section className="text-white container mx-auto py-10 mt-5 2xl:mt-10">
       <h4 className="text-white text-center text-3xl py-5">Hollywood</h4>
@@ -89,7 +88,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  console.log(params);
   const res = await fetch("https://kamrul-hasan01.github.io/api/pages.json");
   const data = await res.json();
   return {

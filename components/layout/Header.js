@@ -10,11 +10,7 @@ const Header = () => {
   const router = useRouter(null);
   const [navOpen, setNavOpen] = useState(false);
   const [model, setModel] = useState(null);
-  // console.log(localStorage.getItem("email"));
-  // useEffect(() => {
-  //   setEmail(localStorage.getItem("email"));
-  //   test = localStorage.getItem("email");
-  // }, [router.pathname]);
+
   const path = router.pathname;
   const switchSideDrawerHandler = useCallback(function (close) {
     if (screen.width > 900) return;

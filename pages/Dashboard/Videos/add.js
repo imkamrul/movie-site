@@ -16,11 +16,10 @@ const Add = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = async (data) => {
-    console.log(data);
     setLoading(true);
     try {
       const res = await axios.post(`${BASE_URL}/videos`, data);
-      console.log(res);
+
       if (res.status === 200) {
         setLoading(false);
         success("Success, New video added");
