@@ -5,7 +5,8 @@ import { useCallback, useRef, useState } from "react";
 import Modal from "react-modal";
 import { CrossIcon2 } from "./SVGIcons";
 
-const TrailerPlayer = () => {
+const TrailerPlayer = ({ content }) => {
+  console.log(content);
   const playerRef = useRef();
 
   const customStyles = {
@@ -63,7 +64,7 @@ const TrailerPlayer = () => {
 
           <ReactPlayer
             className="!w-[calc(100%+60px)] !h-auto md:!w-[640px] aspect-video relative z-[999]"
-            url="https://www.youtube.com/embed/5Eqb_-j3FDA"
+            url={content}
             muted={false}
             playing={true}
             playsinline={true}

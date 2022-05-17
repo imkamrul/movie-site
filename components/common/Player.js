@@ -10,7 +10,7 @@ const Player = ({ url }) => {
         url={"https://youtu.be/5Eqb_-j3FDA"}
         loop={false}
         muted={false}
-        playing={true}
+        playing={false}
         playsinline={true}
         controls={true}
       />
