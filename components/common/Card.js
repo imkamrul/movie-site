@@ -2,7 +2,12 @@ import Image from "next/image";
 import React from "react";
 import Rating from "react-rating";
 import Link from "next/link";
+import { WhiteHeart } from "./SVGIcons";
 const Card = ({ style, content }) => {
+  const handleBookmark = (e) => {
+    // e.target.path.setAttribute("fill", "green");
+    console.log(e.target.svg);
+  };
   return (
     <div className={`w-full  ${style} px-2 py-4  group`}>
       <div className="relative overflow-hidden rounded-md   text-white">
@@ -26,15 +31,17 @@ const Card = ({ style, content }) => {
                 layout="fixed"
               />
             </div>
-            <div className="absolute bottom-0 right-5">
-              <Image
-                className=""
-                src="/white_Heart.svg"
-                alt="heart"
-                width={20}
-                height={20}
-                layout="fixed"
-              />
+            <div className="absolute bottom-2 right-5">
+              <WhiteHeart onClick={handleBookmark} className="bookmark" />
+              {/* <Image
+              className="bookmark"
+              src="/white_Heart.svg"
+              alt="heart"
+              width={20}
+              height={20}
+              layout="fixed"
+              onClick={handleBookmark}
+            /> */}
             </div>
           </a>
         </Link>
