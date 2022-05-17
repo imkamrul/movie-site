@@ -148,6 +148,7 @@ const MovieEdit = ({ data }) => {
                   >
                     <option value="Bollywood">Bollywood</option>
                     <option value="Hollywood">Hollywood</option>
+                    <option value="Tollywood">Tollywood</option>
                   </select>
 
                   {errors.type && (

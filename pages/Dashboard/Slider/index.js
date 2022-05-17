@@ -5,20 +5,15 @@ import React, { useState } from "react";
 import Link from "next/link";
 const Home = ({ data }) => {
   const [sliderData, setSliderData] = useState(data);
-  const handleAllSliderButton = () => {
-    setSliderData(data);
+  const handleSliderFilter = (catagory) => {
+    if (catagory === "Hero_Slider" || catagory === "Comming_soon") {
+      const slider = data.filter((item) => item.catagory === catagory);
+      setSliderData(slider);
+    } else {
+      setSliderData(data);
+    }
   };
 
-  const handleHeroSliderButton = (catagory) => {
-    const hero_slider = data.filter((item) => item.catagory === catagory);
-    setSliderData(hero_slider);
-  };
-  const handleCommingSoonButton = (catagory) => {
-    const comming_hero_slider = data.filter(
-      (item) => item.catagory === catagory
-    );
-    setSliderData(comming_hero_slider);
-  };
   return (
     <section className="flex">
       <DashboardNav />
@@ -33,19 +28,19 @@ const Home = ({ data }) => {
         <div className="pl-10">
           <button
             className="mx-4 py-2 text-white bg-themeText rounded text-xl px-3"
-            onClick={() => handleHeroSliderButton("Hero_Slider")}
+            onClick={() => handleSliderFilter("Hero_Slider")}
           >
             Hero Slider
           </button>
           <button
             className="mx-4 py-2 text-white bg-themeText rounded text-xl px-3"
-            onClick={() => handleCommingSoonButton("Comming_soon")}
+            onClick={() => handleSliderFilter("Comming_soon")}
           >
             Comming soon Slider
           </button>
           <button
             className="mx-4 py-2 text-white bg-themeText rounded text-xl px-3"
-            onClick={handleAllSliderButton}
+            onClick={() => handleSliderFilter("All")}
           >
             All Slider
           </button>

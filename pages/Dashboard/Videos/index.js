@@ -5,17 +5,10 @@ import Table from "../../../components/common/Table";
 import { BASE_URL } from "../../../util/Url";
 const Home = ({ data }) => {
   const [videos, setVideos] = useState(data);
-
-  const handleButtonType = (type) => {
-    if (type === "Bollywood") {
-      const newData = data.filter((item) => item.type === type);
-      setVideos(newData);
-    } else if (type === "Hollywood") {
-      const newData = data.filter((item) => item.type === type);
-      setVideos(newData);
-    } else if (type === "Tollywood") {
-      const newData = data.filter((item) => item.type === type);
-      setVideos(newData);
+  const handleMovieType = (type) => {
+    if (type === "Bollywood" || type === "Tollywood" || type === "Hollywood") {
+      const newVideos = data.filter((item) => item.type === type);
+      setVideos(newVideos);
     } else {
       setVideos(data);
     }
@@ -35,25 +28,25 @@ const Home = ({ data }) => {
         <div className="pl-10">
           <button
             className="mx-4 py-2 text-white bg-themeText rounded text-xl px-3"
-            onClick={() => handleButtonType("All")}
+            onClick={() => handleMovieType("All")}
           >
             All
           </button>
           <button
             className="mx-4 py-2 text-white bg-themeText rounded text-xl px-3"
-            onClick={() => handleButtonType("Hollywood")}
+            onClick={() => handleMovieType("Hollywood")}
           >
             Hollywood
           </button>
           <button
             className="mx-4 py-2 text-white bg-themeText rounded text-xl px-3"
-            onClick={() => handleButtonType("Bollywood")}
+            onClick={() => handleMovieType("Bollywood")}
           >
             Bollywood
           </button>
           <button
             className="mx-4 py-2 text-white bg-themeText rounded text-xl px-3"
-            onClick={() => handleButtonType("Tollywood")}
+            onClick={() => handleMovieType("Tollywood")}
           >
             Tollywood
           </button>
@@ -64,6 +57,7 @@ const Home = ({ data }) => {
             setData={setVideos}
             view={true}
             link="Videos"
+            type={true}
           />
         </div>
       </div>
