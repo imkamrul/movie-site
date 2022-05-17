@@ -10,16 +10,16 @@
       "submenu": [
         {
           "text": "Bollywood",
-          "link": "/catagories/bollywood"
+          "link": "/catagories/Bollywood"
         },
         {
           "text": "Hollywood",
-          "link": "/catagories/hollywood"
+          "link": "/catagories/Hollywood"
         },
 
         {
           "text": "Tollywood",
-          "link": "/catagories/tollywood"
+          "link": "/catagories/Tollywood"
         }
       ]
     },

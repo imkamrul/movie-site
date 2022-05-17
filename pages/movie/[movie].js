@@ -1,12 +1,14 @@
 import React from "react";
+import MayBeLike from "../../components/common/MayBeLike";
 import MovieInfo from "../../components/common/MovieInfo";
 import Player from "../../components/common/Player";
 import { BASE_URL } from "../../util/Url";
-const Movie = ({ content }) => {
+const Movie = ({ content, suggestion }) => {
   return (
     <>
-      {/* <Player /> */}
+      <Player content={content.download} />
       <MovieInfo content={content} />
+      {suggestion.length && <MayBeLike content={suggestion} />}
     </>
   );
 };
@@ -23,9 +25,11 @@ const Movie = ({ content }) => {
 export async function getServerSideProps({ params }) {
   const res = await fetch(`${BASE_URL}/videos/${params.movie}`);
   const data = await res.json();
-  console.log(data);
+  const result = await fetch(`${BASE_URL}/videos?type=${data.type}`);
+  const all = await result.json();
+  const suggestion = all.filter((item) => item._id !== params.movie);
   return {
-    props: { content: data },
+    props: { content: data, suggestion: suggestion },
   };
 }
 

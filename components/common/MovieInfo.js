@@ -3,7 +3,6 @@ import Rating from "react-rating";
 import TrailerPlayer from "./TrailerPlayer";
 
 const MovieInfo = ({ content }) => {
-  console.log(content);
   return (
     <section>
       <div className="container mx-auto text-white">
