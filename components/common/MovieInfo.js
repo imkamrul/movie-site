@@ -10,7 +10,19 @@ const MovieInfo = ({ content }) => {
           <h2 className="text-4xl py-3 ">{content.name}</h2>
           <TrailerPlayer content={content.trailer} />
         </div>
-        <p className="text-sm py-2">{content.info}</p>
+
+        <p className="text-lg">
+          <span>DownLoad </span>{" "}
+          <span>
+            {" "}
+            <a
+              className="text-themeText hover:underline"
+              href={content.download}
+            >
+              Download now
+            </a>
+          </span>
+        </p>
         <p className="text-lg">
           <span>Writer </span> <span> {content.writer}</span>
         </p>
@@ -34,11 +46,22 @@ const MovieInfo = ({ content }) => {
               {content.genre.length - 1 !== index && ", "}
             </span>
           ))}
-          {/* <span className="text-themeText"> Action, Adventure, Drama</span> */}
         </p>
         <p className="text-lg">
           <span>Run TIme </span>
           <span> {content.duration}</span>
+        </p>
+        <p className="text-lg">
+          <span>DownLoad </span>{" "}
+          <span>
+            {" "}
+            <a
+              className="text-themeText hover:underline"
+              href={content.subtitle}
+            >
+              Subtitle
+            </a>
+          </span>
         </p>
         <p className="text-lg">
           <span>Release Date </span>
@@ -60,6 +83,7 @@ const MovieInfo = ({ content }) => {
           <span>Quality </span>
           <span>{content.quality}</span>
         </p>
+        <p className="text-sm py-2">{content.info}</p>
       </div>
     </section>
   );

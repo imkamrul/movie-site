@@ -7,15 +7,14 @@ const Layout = ({ children }) => {
   const [nav, setNav] = useState(true);
 
   useEffect(() => {
-    if (router.pathname === "/") {
-      setNav(true);
-    } else if (router.pathname.includes("catagories")) {
-    } else if (router.pathname.includes("movie")) {
+    if (
+      router.pathname === "/" ||
+      router.pathname.includes("catagories") ||
+      router.pathname.includes("movie") ||
+      router.pathname.includes("request")
+    ) {
       setNav(true);
     } else {
-      setNav(false);
-    }
-    if (router.pathname === "/movie-collection") {
       setNav(false);
     }
   }, [router]);
