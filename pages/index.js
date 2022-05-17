@@ -18,17 +18,17 @@ const Index = ({ pageData, videos, sliders }) => {
       <MovieSection
         content={hollywood_movie}
         title="Hollywood"
-        link="/catagories/hollywood"
+        link="/catagories/Hollywood"
       />
       <MovieSection
         content={bollywood_movie}
         title="Bollywood"
-        link="/catagories/bollywood"
+        link="/catagories/Bollywood"
       />
       <MovieSection
         content={tollywood_movie}
         title="Tollywood"
-        link="/catagories/tollywood"
+        link="/catagories/Tollywood"
       />
       <SingleSlider />
     </>

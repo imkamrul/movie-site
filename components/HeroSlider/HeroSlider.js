@@ -14,7 +14,7 @@ import HeroSliderItem from "./HeroSliderItem";
 import { LeftArrow, RightArrow } from "../common/SVGIcons";
 
 SwiperCore.use([Autoplay, EffectFade, Navigation]);
-const HeroSlider = ({ heroSliderItem }) => {
+const HeroSlider = ({ content }) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const [count, setCount] = useState(0);
@@ -84,18 +84,10 @@ const HeroSlider = ({ heroSliderItem }) => {
           }}
           isActive
         >
-          {heroSliderItem.map(({ bgImage, heading, desc, image }) => (
-            <SwiperSlide key={heading}>
+          {content.map((item, index) => (
+            <SwiperSlide key={index}>
               {({ isActive }) => {
-                return (
-                  <HeroSliderItem
-                    bgImage={bgImage}
-                    heading={heading}
-                    desc={desc}
-                    image={image}
-                    isActive={isActive}
-                  />
-                );
+                return <HeroSliderItem content={item} isActive={isActive} />;
               }}
             </SwiperSlide>
           ))}
