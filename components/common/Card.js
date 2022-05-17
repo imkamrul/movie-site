@@ -6,7 +6,7 @@ const Card = ({ style, content }) => {
   console.log(content);
   return (
     <div className={`w-full  ${style} px-2 py-4  group`}>
-      <div className="relative overflow-hidden rounded-md   text-white">
+      {/* <div className="relative overflow-hidden rounded-md   text-white">
         <Link href={`/movie/${content._id}`}>
           <a>
             <Image
@@ -61,7 +61,7 @@ const Card = ({ style, content }) => {
           />
           {"  "} {content.rating}
         </span>
-      </div>
+      </div> */}
     </div>
   );
 };
