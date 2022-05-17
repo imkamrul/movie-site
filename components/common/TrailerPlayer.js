@@ -6,7 +6,7 @@ import Modal from "react-modal";
 import { CrossIcon2 } from "./SVGIcons";
 
 const TrailerPlayer = ({ content }) => {
-  console.log(content);
+  // console.log(content);
   const playerRef = useRef();
 
   const customStyles = {

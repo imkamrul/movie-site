@@ -6,7 +6,7 @@ import { WhiteHeart } from "./SVGIcons";
 const Card = ({ style, content }) => {
   const handleBookmark = (e) => {
     // e.target.path.setAttribute("fill", "green");
-    console.log(e.target.svg);
+    // console.log(e.target.svg);
   };
   return (
     <div className={`w-full  ${style} px-2 py-4  group`}>

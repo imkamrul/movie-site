@@ -1,8 +1,17 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { FacebookIcon, GoogleIcon } from "../components/common/SVGIcons";
-const Login = () => {
+import { useSession, signIn, signOut } from "next-auth/react";
+import { providers, getSession, csrfToken } from "next-auth/react";
+const Login = ({ providers, session, csrfToken }) => {
+  // const { data: session } = useSession();
+
+  // <button onClick={() => signIn()}>Sign in</button>
+  // <button onClick={() => signOut()}>Sign out</button>
+  // console.log(session);
+  console.log(providers, session, csrfToken);
   const {
     register,
     handleSubmit,
@@ -35,7 +44,10 @@ const Login = () => {
             {signUp ? "Sign Up" : "Sign In"} With
           </h4>
           <div className="text-center py-5 flex justify-between w-8/12 mx-auto">
-            <button className="bg-[#3f9fff] text-white px-3 py-2 rounded mx-3 shadow-lg flex items-center">
+            <button
+              onClick={() => signIn()}
+              className="bg-[#3f9fff] text-white px-3 py-2 rounded mx-3 shadow-lg flex items-center"
+            >
               <FacebookIcon />
               <span className="pl-3 text-xl"> Facebook</span>
             </button>
@@ -136,3 +148,13 @@ const Login = () => {
   );
 };
 export default Login;
+export async function getServerSideProps(context) {
+  console.log(context);
+  return {
+    props: {
+      // providers: await providers(),
+      // session: await getSession(),
+      // csrfToken: await csrfToken(),
+    },
+  };
+}

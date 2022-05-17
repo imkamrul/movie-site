@@ -5,7 +5,11 @@ import HeroSlider from "../components/HeroSlider/HeroSlider";
 import SingleSlider from "../components/singleSlider/SingleSlider";
 import homePageData from "../data/home.json";
 import { BASE_URL } from "../util/Url";
+import { useSession } from "next-auth/react";
 const Index = ({ pageData, videos, sliders }) => {
+  const { data: session, status } = useSession();
+  const loading = status === "loading";
+  console.log(session);
   const { hero_slider } = pageData;
   const hollywood_movie = videos.filter((item) => item.type === "Hollywood");
   const bollywood_movie = videos.filter((item) => item.type === "Bollywood");

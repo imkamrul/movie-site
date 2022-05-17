@@ -4,8 +4,17 @@ import { useRouter } from "next/router";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { BurgerMenu, CrossIcon } from "../common/SVGIcons";
 import navData from "../../data/navbar.json";
-
+import { useSession, signIn, signOut } from "next-auth/react";
 const Header = () => {
+  const { data: session } = useSession();
+  const handleSignin = (e) => {
+    e.preventDefault();
+    signIn();
+  };
+  const handleSignout = (e) => {
+    e.preventDefault();
+    signOut();
+  };
   const { logo, nav_link } = navData;
   const router = useRouter(null);
   const [navOpen, setNavOpen] = useState(false);
@@ -148,7 +157,7 @@ const Header = () => {
                     );
                   })}
 
-                  {/* <li
+                  <li
                     onClick={switchSideDrawerHandler.bind(this, navOpen)}
                     className="my-1 lg:mx-8"
                   >
@@ -160,7 +169,17 @@ const Header = () => {
                         Sign in
                       </a>
                     </Link>
-                  </li> */}
+                  </li>
+                  {session && (
+                    <a href="#" onClick={handleSignout} className="btn-signin">
+                      Sign out
+                    </a>
+                  )}
+                  {!session && (
+                    <a href="#" onClick={handleSignin} className="btn-signin">
+                      Sign in
+                    </a>
+                  )}
                 </ul>
               </div>
             </nav>
