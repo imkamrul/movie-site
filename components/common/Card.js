@@ -11,7 +11,7 @@ const Card = ({ style, content }) => {
           <a>
             <Image
               className="group-hover:scale-[1.2] ease-out duration-700 group-hover:opacity-70"
-              src="https://i.ibb.co/nbBJfx7/KGF-chapter2.jpg"
+              src={content.image}
               alt="movie"
               width={312}
               height={175}
