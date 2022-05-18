@@ -7,14 +7,7 @@ import navData from "../../data/navbar.json";
 import { useSession, signIn, signOut } from "next-auth/react";
 const Header = () => {
   const { data: session } = useSession();
-  const handleSignin = (e) => {
-    e.preventDefault();
-    signIn();
-  };
-  const handleSignout = (e) => {
-    e.preventDefault();
-    signOut();
-  };
+  console.log(session);
   const { logo, nav_link } = navData;
   const router = useRouter(null);
   const [navOpen, setNavOpen] = useState(false);
@@ -145,7 +138,7 @@ const Header = () => {
                     ) : (
                       <li
                         key={idx}
-                        className="my-1 lg:mx-8"
+                        className="my-1 lg:mx-4"
                         onClick={switchSideDrawerHandler.bind(this, navOpen)}
                       >
                         <Link href={item.link}>
@@ -156,30 +149,42 @@ const Header = () => {
                       </li>
                     );
                   })}
-
+                  {session && (
+                    <li
+                      className="my-1 lg:mx-4"
+                      onClick={switchSideDrawerHandler.bind(this, navOpen)}
+                    >
+                      <Link href="/Dashboard/Videos">
+                        <a className="nav__item text-white lg:hover:text-themeText">
+                          Dashboard
+                        </a>
+                      </Link>
+                    </li>
+                  )}
                   <li
                     onClick={switchSideDrawerHandler.bind(this, navOpen)}
-                    className="my-1 lg:mx-8"
+                    className="my-1 lg:mx-8 cursor-pointer"
                   >
-                    <Link href="/login">
+                    {/* <Link href="/login"> */}
+                    {!session ? (
                       <a
                         className="bg-[#00B67A] text-white w-[66px] text-center rounded-md px-3 py-2"
                         id="blog"
+                        onClick={() => signIn()}
                       >
                         Sign in
                       </a>
-                    </Link>
+                    ) : (
+                      <a
+                        href="#"
+                        onClick={() => signOut()}
+                        className="bg-[yellow] text-black w-[66px] text-center rounded-md px-3 py-2"
+                      >
+                        Sign out
+                      </a>
+                    )}
+                    {/* </Link> */}
                   </li>
-                  {session && (
-                    <a href="#" onClick={handleSignout} className="btn-signin">
-                      Sign out
-                    </a>
-                  )}
-                  {!session && (
-                    <a href="#" onClick={handleSignin} className="btn-signin">
-                      Sign in
-                    </a>
-                  )}
                 </ul>
               </div>
             </nav>
