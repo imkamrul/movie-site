@@ -6,7 +6,9 @@ const Request = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    // console.log(data)
+  };
   return (
     <section className="flex">
       <div className="w-10/12 pt-[20px] mx-auto">

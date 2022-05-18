@@ -20,7 +20,6 @@ const customStyles = {
   },
 };
 const HeroSliderItem = ({ content, isActive }) => {
-  console.log(content);
   const [modalIsOpen, setIsOpen] = useState(false);
   const [playing, setPlaying] = useState(false);
 

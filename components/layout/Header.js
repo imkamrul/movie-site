@@ -4,9 +4,11 @@ import { useRouter } from "next/router";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { BurgerMenu, CrossIcon } from "../common/SVGIcons";
 import navData from "../../data/navbar.json";
+import useUser from "../../hooks/useUser";
 
 const Header = () => {
   const { logo, nav_link } = navData;
+  const { admin, logout } = useUser();
   const router = useRouter(null);
   const [navOpen, setNavOpen] = useState(false);
   const [model, setModel] = useState(null);
@@ -86,7 +88,13 @@ const Header = () => {
               <div className="w-36 h-12 relative">
                 <Link href="/">
                   <a>
-                    <Image layout="fill" src="/logo.png" alt="Logo" />
+                    <Image
+                      layout="fixed"
+                      src="/logo.png"
+                      alt="Logo"
+                      width={120}
+                      height={50}
+                    />
                   </a>
                 </Link>
               </div>
@@ -147,20 +155,41 @@ const Header = () => {
                       </li>
                     );
                   })}
-
-                  {/* <li
+                  {admin && (
+                    <li
+                      className="my-1 lg:mx-8"
+                      onClick={switchSideDrawerHandler.bind(this, navOpen)}
+                    >
+                      <Link href="Dashboard/Videos">
+                        <a className="nav__item text-white lg:hover:text-themeText">
+                          Dashboard
+                        </a>
+                      </Link>
+                    </li>
+                  )}
+                  <li
                     onClick={switchSideDrawerHandler.bind(this, navOpen)}
                     className="my-1 lg:mx-8"
                   >
-                    <Link href="/login">
+                    {!admin ? (
+                      <Link href="/login">
+                        <a
+                          className="bg-[#00B67A] text-white w-[66px] text-center rounded-md px-3 py-2"
+                          id="blog"
+                        >
+                          Sign in
+                        </a>
+                      </Link>
+                    ) : (
                       <a
+                        onClick={logout}
                         className="bg-[#00B67A] text-white w-[66px] text-center rounded-md px-3 py-2"
                         id="blog"
                       >
-                        Sign in
+                        Sign out
                       </a>
-                    </Link>
-                  </li> */}
+                    )}
+                  </li>
                 </ul>
               </div>
             </nav>
