@@ -14,11 +14,14 @@ const useUser = () => {
     }
   };
   const logout = () => {
-    setAdmin(false);
     localStorage.setItem("admin", false);
+    setAdmin(false);
   };
   useEffect(() => {
-    setAdmin(localStorage.getItem("admin"));
+    const test = localStorage.getItem("admin");
+    if (test === "true") {
+      setAdmin(true);
+    } else setAdmin(false);
   }, []);
   return {
     login,

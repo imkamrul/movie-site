@@ -173,18 +173,14 @@ const Header = () => {
                   >
                     {!admin ? (
                       <Link href="/login">
-                        <a
-                          className="bg-[#00B67A] text-white w-[66px] text-center rounded-md px-3 py-2"
-                          id="blog"
-                        >
+                        <a className="bg-[#00B67A] text-white w-[66px] text-center rounded-md px-3 py-2">
                           Sign in
                         </a>
                       </Link>
                     ) : (
                       <a
                         onClick={logout}
-                        className="bg-[#00B67A] text-white w-[66px] text-center rounded-md px-3 py-2"
-                        id="blog"
+                        className="bg-[#00B67A] text-white w-[66px] text-center rounded-md px-3 py-2 cursor-pointer"
                       >
                         Sign out
                       </a>
