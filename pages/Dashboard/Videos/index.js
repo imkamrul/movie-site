@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DashboardNav from "../../../components/Section/DashboardNav";
 import Link from "next/link";
 import Table from "../../../components/common/Table";
 import { BASE_URL } from "../../../util/Url";
+import useUser from "../../../hooks/useUser";
 const Home = ({ data }) => {
   const [videos, setVideos] = useState(data);
+
   const handleMovieType = (type) => {
     if (type === "Bollywood" || type === "Tollywood" || type === "Hollywood") {
       const newVideos = data.filter((item) => item.type === type);
@@ -13,6 +15,10 @@ const Home = ({ data }) => {
       setVideos(data);
     }
   };
+  const { admin } = useUser();
+
+  if (!admin) return null;
+
   return (
     <section className="flex">
       <DashboardNav />
