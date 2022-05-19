@@ -49,7 +49,7 @@ const Catagories = ({ content, title }) => {
                 })}
             </div>
           </div>
-          <div className="pt-10">
+          {/* <div className="pt-10">
             <h4 className="text-lg py-4">Filter By Category</h4>
             <p className="my-1 cursor-pointer hover:text-themeText">
               <i className="fa-solid fa-folder pr-3" /> football (1)
@@ -78,7 +78,7 @@ const Catagories = ({ content, title }) => {
             <p className="my-1 cursor-pointer hover:text-themeText">
               <i className="fa-solid fa-folder pr-3" /> cricket (5)
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -6,13 +6,16 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import DashboardNav from "../../../components/Section/DashboardNav";
 import { BASE_URL } from "../../../util/Url";
+import { useRouter } from "next/router";
 const SliderAdd = () => {
+  const router = useRouter();
   const error = (text) => toast.error(text);
   const success = (text) => toast.success(text);
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
   const [loading, setLoading] = useState(false);
   const onSubmit = async (data) => {
@@ -20,8 +23,12 @@ const SliderAdd = () => {
     try {
       const res = await axios.post(`${BASE_URL}/slider`, data);
       if (res.status === 200) {
+        reset();
         setLoading(false);
         success("Success, New slider added");
+        setTimeout(() => {
+          router.push("/Dashboard/Slider");
+        }, 5000);
       }
     } catch (err) {
       setLoading(false);

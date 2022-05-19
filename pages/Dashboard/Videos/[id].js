@@ -24,9 +24,9 @@ const MovieEdit = ({ data }) => {
       if (res.data.matchedCount == 1) {
         setLoading(false);
         success("Success, Video Data Update");
-        // setTimeout(() => {
-        //   router.push("/Dashboard/Videos");
-        // }, 5000);
+        setTimeout(() => {
+          router.push("/Dashboard/Videos");
+        }, 5000);
       }
     } catch (err) {
       setLoading(false);

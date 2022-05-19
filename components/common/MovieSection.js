@@ -16,7 +16,7 @@ const MovieSection = ({ content, title, link }) => {
           </Link>
         </div>
         <div className="flex flex-wrap">
-          {content.map((item, index) => {
+          {content.slice(0, 4).map((item, index) => {
             return (
               <Card key={index} style="md:w-4/12 lg:w-3/12" content={item} />
             );

@@ -6,13 +6,16 @@ import "react-toastify/dist/ReactToastify.css";
 import DashboardNav from "../../../components/Section/DashboardNav";
 import { BASE_URL } from "../../../util/Url";
 import axios from "axios";
+import { useRouter } from "next/router";
 const Add = () => {
+  const router = useRouter();
   const error = (text) => toast.error(text);
   const success = (text) => toast.success(text);
   const [loading, setLoading] = useState(false);
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
   const onSubmit = async (data) => {
@@ -21,8 +24,12 @@ const Add = () => {
       const res = await axios.post(`${BASE_URL}/videos`, data);
 
       if (res.status === 200) {
+        reset();
         setLoading(false);
         success("Success, New video added");
+        setTimeout(() => {
+          router.push("/Dashboard/Videos");
+        }, 5000);
       }
     } catch (err) {
       setLoading(false);

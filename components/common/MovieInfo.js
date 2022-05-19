@@ -52,7 +52,7 @@ const MovieInfo = ({ content }) => {
           <span> {content.duration}</span>
         </p>
         <p className="text-lg">
-          <span>DownLoad </span>{" "}
+          <span>Subtitle </span>{" "}
           <span>
             {" "}
             <a
