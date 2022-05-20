@@ -44,7 +44,7 @@ const HeroSliderItem = ({ content, isActive }) => {
       }}
       className="w-screen bg-slider"
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto active-slider">
         <div className="h-auto lg:h-[100vh] py-5  container 3xl:mx-auto flex flex-col-reverse lg:flex-row items-center lg:px-[70px]">
           <div className="w-full lg:w-6/12  pl-3 z-[999]">
             <h2 className="text-white text-xl lg:text-6xl font-semibold">
@@ -96,7 +96,7 @@ const HeroSliderItem = ({ content, isActive }) => {
               </a>
             </div>
           </div>
-          <div className="w-full lg:w-6/12 px-5 lg:px-[35px]">
+          <div className="w-full lg:w-6/12 px-5 lg:px-[35px] z-[9999]">
             <div className="relative">
               <Image
                 src={content.banner_image}

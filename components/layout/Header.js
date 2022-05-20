@@ -93,7 +93,7 @@ const Header = () => {
                       src="/logo.png"
                       alt="Logo"
                       width={120}
-                      height={50}
+                      height={60}
                     />
                   </a>
                 </Link>
@@ -160,7 +160,7 @@ const Header = () => {
                       className="my-1 lg:mx-8"
                       onClick={switchSideDrawerHandler.bind(this, navOpen)}
                     >
-                      <Link href="Dashboard/Videos">
+                      <Link href="/Dashboard/Videos">
                         <a className="nav__item text-white lg:hover:text-themeText">
                           Dashboard
                         </a>
