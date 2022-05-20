@@ -20,19 +20,27 @@ const Add = () => {
   } = useForm();
   const onSubmit = async (data) => {
     setLoading(true);
-    try {
-      const res = await axios.post(`${BASE_URL}/videos`, data);
+    const rating = parseFloat(data.rating);
+    data.upload_date = new Date().toLocaleDateString();
+    data.rating = rating;
 
-      if (res.status === 200) {
-        reset();
+    if (rating >= 0 && rating <= 10) {
+      try {
+        const res = await axios.post(`${BASE_URL}/videos`, data);
+
+        if (res.status === 200) {
+          reset();
+          setLoading(false);
+          success("Success, New video added");
+          setTimeout(() => {
+            router.push("/Dashboard/Videos");
+          }, 5000);
+        }
+      } catch (err) {
         setLoading(false);
-        success("Success, New video added");
-        setTimeout(() => {
-          router.push("/Dashboard/Videos");
-        }, 5000);
+        error("Error, Can't add new video");
       }
-    } catch (err) {
-      setLoading(false);
+    } else {
       error("Error, Can't add new video");
     }
   };
@@ -227,6 +235,14 @@ const Add = () => {
                     />
                     <span className="pl-2">Romantic</span>
                   </label>
+                  <label className="inline-flex items-center pr-6">
+                    <input
+                      type="checkbox"
+                      value="Drama"
+                      {...register("genre", { required: true })}
+                    />
+                    <span className="pl-2">Drama</span>
+                  </label>
 
                   <label className="inline-flex items-center pr-3">
                     <input
@@ -305,9 +321,9 @@ const Add = () => {
                 <p className="py-2 w-3/12">Rating</p>
                 <div className="w-7/12">
                   <input
-                    type="number"
+                    type="text"
                     className="py-2 rounded text-black pl-3 outline outline-offset-2 outline-1  w-full"
-                    {...register("rating", { required: true, max: 10, min: 0 })}
+                    {...register("rating", { required: true })}
                   />
                   {errors.rating && (
                     <p className="text-[red] text-xs py-2">
