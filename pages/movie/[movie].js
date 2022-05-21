@@ -2,10 +2,15 @@ import React from "react";
 import MayBeLike from "../../components/common/MayBeLike";
 import MovieInfo from "../../components/common/MovieInfo";
 import Player from "../../components/common/Player";
+import Head from "next/head";
 import { BASE_URL } from "../../util/Url";
 const Movie = ({ content, suggestion }) => {
   return (
     <>
+      <Head>
+        <title>{content.name}</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Player content={content.download} />
       <MovieInfo content={content} />
       {suggestion.length && <MayBeLike content={suggestion} />}

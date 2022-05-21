@@ -1,6 +1,5 @@
 import axios from "axios";
 import React from "react";
-
 import Swal from "sweetalert2";
 import { BASE_URL } from "../../util/Url";
 import { ToastContainer, toast } from "react-toastify";
@@ -100,7 +99,7 @@ const Table = ({ content, setData, link, view, type }) => {
                   )}
                   {type ? (
                     <td scope="col" className="px-6 py-3">
-                      {item.genre?.map((type, index) => (
+                      {item.genre.map((type, index) => (
                         <span className="inline-block pr-2" key={index}>
                           {type} {item.genre.length - 1 !== index && ","}
                         </span>
@@ -115,13 +114,13 @@ const Table = ({ content, setData, link, view, type }) => {
                   <td className="px-6 py-4">{item.date}</td>
                   <td className="px-6 py-4">{item.rating}</td>
                   <td className="px-6 py-4 text-center">
-                    {/* {view && (
-                      <Link href={`/${link}/${item._id}`}>
+                    {view && (
+                      <Link href={`/movie/${item._id}`}>
                         <a className="mx-3 font-medium text-white hover:underline">
                           View
                         </a>
                       </Link>
-                    )} */}
+                    )}
                     <Link href={`/Dashboard/${link}/${item._id}`}>
                       <a className="mx-3 font-medium text-themeText hover:underline">
                         Edit
