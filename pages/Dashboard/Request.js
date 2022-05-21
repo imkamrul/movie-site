@@ -9,6 +9,16 @@ const Request = ({ data }) => {
   const error = (text) => toast.error(text);
   const success = (text) => toast.success(text);
   const [content, setContent] = useState(data);
+  const staticStatusList = ["Pending", "Processing", "Uploaded", "Not Found"];
+
+  const statusListView = staticStatusList.map((item, index) => {
+    return (
+      <option value={item} key={index}>
+        {item}
+      </option>
+    );
+  });
+
   const [loading, setLoading] = useState(false);
   const handleDelete = (id) => {
     Swal.fire({
@@ -48,9 +58,8 @@ const Request = ({ data }) => {
       if (res.data.matchedCount == 1) {
         setLoading(false);
         success("Success, Status Updated");
-        // setTimeout(() => {
-        //   router.push("/Dashboard/Videos");
-        // }, 5000);
+        const res = await axios.get(`${BASE_URL}/request`);
+        setContent(res.data);
       }
     } catch (err) {
       setLoading(false);
@@ -123,12 +132,17 @@ const Request = ({ data }) => {
                       onChange={(e) => handleStatus(e, item._id)}
                       // key={item._id}
                     >
-                      <option defaultValue={item.status}>{item.status}</option>
-                      <option value="Processing">Processing</option>
-                      <option value="Pending">Pending</option>
-                      <option value="Uploaded">Uploaded</option>
-
-                      <option value="Not Found">Not Found</option>
+                      {staticStatusList.map((staticItem, index) => {
+                        return (
+                          <option
+                            value={staticItem}
+                            selected={item.status == staticItem}
+                            key={index}
+                          >
+                            {staticItem}
+                          </option>
+                        );
+                      })}
                     </select>
                   </td>
                   <td className="px-6 py-4 text-center">
