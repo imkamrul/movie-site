@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { BurgerMenu, CrossIcon } from "../common/SVGIcons";
 import navData from "../../data/navbar.json";
 import useUser from "../../hooks/useUser";
+import { BurgerMenu, CrossIcon } from "../common/SVGIcons";
 
 const Header = () => {
   const { logo, nav_link } = navData;
@@ -93,7 +93,7 @@ const Header = () => {
                       src="/logo.png"
                       alt="Logo"
                       width={120}
-                      height={60}
+                      height={50}
                     />
                   </a>
                 </Link>
