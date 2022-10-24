@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
-import DashboardNav from "../../../components/Section/DashboardNav";
 import Link from "next/link";
+import React, { useState } from "react";
 import Table from "../../../components/common/Table";
+import DashboardNav from "../../../components/Section/DashboardNav";
 import { BASE_URL } from "../../../util/Url";
-import useUser from "../../../hooks/useUser";
 const Home = ({ data }) => {
   const [videos, setVideos] = useState(data);
 
@@ -15,9 +14,6 @@ const Home = ({ data }) => {
       setVideos(data);
     }
   };
-  const { admin } = useUser();
-
-  if (!admin) return null;
 
   return (
     <section className="flex">

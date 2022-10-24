@@ -3,7 +3,6 @@ import React, { useCallback, useState } from "react";
 import Modal from "react-modal";
 import ReactPlayer from "react-player";
 import { CrossIcon2 } from "../common/SVGIcons";
-import BackgroundSVG from "../ui/BackgroundSVG";
 // modal style
 const customStyles = {
   content: {
@@ -45,9 +44,9 @@ const HeroSliderItem = ({ content, isActive }) => {
       className="w-screen bg-slider"
     >
       <div className="container mx-auto active-slider">
-        <div className="h-auto lg:h-[100vh] py-5  container 3xl:mx-auto flex flex-col-reverse lg:flex-row items-center lg:px-[70px]">
+        <div className="h-auto lg:h-[100vh] py-5  container 3xl:mx-auto flex flex-col-reverse lg:flex-row items-center">
           <div className="w-full lg:w-6/12  pl-3 z-[999]">
-            <h2 className="text-white text-xl lg:text-6xl font-semibold">
+            <h2 className="text-white pt-10 lg:pt-0 text-xl lg:text-6xl font-semibold">
               {content.name}
             </h2>
             <p className="text-white text-base lg:text-lg pt-3">
@@ -81,16 +80,16 @@ const HeroSliderItem = ({ content, isActive }) => {
               {content.language}
             </p>
 
-            <div className="flex mb-10 lg:mb-0 z-50">
+            <div className="md:flex mb-10 lg:mb-0 z-50">
               <a
                 href={content.trailer}
-                className="bg-themeBG hover:bg-themeText px-4 py-2 rounded-sm mt-5 inline-block text-white uppercase text-sm lg:text-lg w-6/12 lg:w-4/12  text-center"
+                className="bg-themeBG hover:bg-themeText px-4 py-2 rounded-sm mt-5 inline-block text-white uppercase text-sm lg:text-lg w-9/12 lg:w-4/12  text-center"
               >
                 <i className="fa-solid fa-play pr-2" /> Play Trailer
               </a>
               <a
                 href={content.download_link}
-                className="bg-themeBG hover:bg-themeText px-4 py-2 rounded-sm mt-5 inline-block text-white uppercase  mx-5 text-sm lg:text-lg w-7/12 lg:w-4/12 text-center"
+                className="bg-themeBG hover:bg-themeText px-4 py-2 rounded-sm mt-5 inline-block text-white uppercase  md:mx-5 text-sm lg:text-lg w-9/12 lg:w-4/12 text-center"
               >
                 <i className="fa-solid fa-download pr-2" /> Download
               </a>

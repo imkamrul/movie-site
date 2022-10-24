@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import { useUser } from "@auth0/nextjs-auth0";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,11 +11,20 @@ import { BurgerMenu, CrossIcon } from "../common/SVGIcons";
 const Header = () => {
   const { logo, nav_link } = navData;
   const { user } = useUser();
+  const [admin, setAdmin] = useState(false);
+  console.log("admin :", admin);
   console.log("user :", user);
   const router = useRouter(null);
   const [navOpen, setNavOpen] = useState(false);
   const [model, setModel] = useState(null);
-
+  useEffect(() => {
+    if (
+      user?.sub === "google-oauth2|112614646180908025543" &&
+      user?.nickname === "k17h02"
+    ) {
+      setAdmin(true);
+    }
+  }, [user]);
   const path = router.pathname;
   const switchSideDrawerHandler = useCallback(function (close) {
     if (screen.width > 900) return;
@@ -157,7 +167,7 @@ const Header = () => {
                       </li>
                     );
                   })}
-                  {/* {admin && (
+                  {admin && (
                     <li
                       className="my-1 lg:mx-8"
                       onClick={switchSideDrawerHandler.bind(this, navOpen)}
@@ -168,7 +178,7 @@ const Header = () => {
                         </a>
                       </Link>
                     </li>
-                  )} */}
+                  )}
                   <li
                     onClick={switchSideDrawerHandler.bind(this, navOpen)}
                     className="my-1 lg:mx-8"
