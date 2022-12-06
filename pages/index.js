@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import MovieSearch from "../components/common/MovieSearch";
 import MovieSection from "../components/common/MovieSection";
 import HeroSlider from "../components/HeroSlider/HeroSlider";
