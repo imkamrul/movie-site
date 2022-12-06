@@ -1,3 +1,3 @@
 module.exports = {
-  BASE_URL: "https://movie-scope01.herokuapp.com",
+  BASE_URL: "https://movie-scope-server.vercel.app",
 };
