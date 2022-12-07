@@ -1,17 +1,16 @@
-import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useRef, useState } from "react";
 import SwiperCore, {
   Autoplay,
-  Navigation,
-  Mousewheel,
-  Keyboard,
   EffectFade,
+  Keyboard,
+  Mousewheel,
+  Navigation,
 } from "swiper";
-import { useRef } from "react";
 import "swiper/css";
 import "swiper/css/effect-fade";
-import HeroSliderItem from "./HeroSliderItem";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { LeftArrow, RightArrow } from "../common/SVGIcons";
+import HeroSliderItem from "./HeroSliderItem";
 
 SwiperCore.use([Autoplay, EffectFade, Navigation]);
 const HeroSlider = ({ content }) => {
@@ -29,7 +28,7 @@ const HeroSlider = ({ content }) => {
   return (
     <>
       <div className="relative h-full arrow-item">
-        <div className="flex justify-between items-center h-full arrow tr hero-slider">
+        <div className="flex justify-between items-center h-full arrow ">
           <div className="absolute z-50 top-0 left-6 h-full flex items-center justify-center tr">
             <div
               className={`group relative w-16 cursor-pointer  h-16`}
