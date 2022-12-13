@@ -1,3 +1,3 @@
 module.exports = {
-  BASE_URL: "https://movie-scope-server.vercel.app",
+  BASE_URL: "https://www.api.kamrul.pro",
 };
