@@ -1,16 +1,14 @@
-import { useUser } from "@auth0/nextjs-auth0";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useRef, useState } from "react";
 import navData from "../../data/navbar.json";
-// import useUser from "../../hooks/useUser";
+
 import { BurgerMenu, CrossIcon } from "../common/SVGIcons";
 
 const Header = () => {
   const { logo, nav_link } = navData;
-  const { user } = useUser();
-  console.log("user :", user);
+
   const router = useRouter(null);
   const [navOpen, setNavOpen] = useState(false);
   const [model, setModel] = useState(null);
@@ -157,50 +155,17 @@ const Header = () => {
                       </li>
                     );
                   })}
-                  {/* {admin && (
-                    <li
-                      className="my-1 lg:mx-8"
-                      onClick={switchSideDrawerHandler.bind(this, navOpen)}
-                    >
-                      <Link href="/Dashboard/Videos">
-                        <a className="nav__item text-white lg:hover:text-themeText">
-                          Dashboard
-                        </a>
-                      </Link>
-                    </li>
-                  )} */}
-                  <li
-                    onClick={switchSideDrawerHandler.bind(this, navOpen)}
+
+                  {/* <li
                     className="my-1 lg:mx-8"
+                    onClick={switchSideDrawerHandler.bind(this, navOpen)}
                   >
-                    {user?.nickname ? (
-                      <div className="flex items-center gap-x-2">
-                        <img
-                          src={user?.picture}
-                          alt={user?.name}
-                          className="w-10 rounded-full"
-                        />
-                        <p className="text-white">{user?.nickname}</p>
-                        <Link href="/api/auth/logout">
-                          <a
-                            href="/api/auth/logout"
-                            className="bg-[#00B67A] text-white w-[110px] text-center rounded-md px-3 py-2"
-                          >
-                            Sign out
-                          </a>
-                        </Link>
-                      </div>
-                    ) : (
-                      <Link href="/api/auth/login">
-                        <a
-                          href="/api/auth/login"
-                          className="bg-[#00B67A] text-white w-[66px] text-center rounded-md px-3 py-2"
-                        >
-                          Sign in
-                        </a>
-                      </Link>
-                    )}
-                  </li>
+                    <Link href="/Dashboard/Videos">
+                      <a className="nav__item text-white lg:hover:text-themeText">
+                        Dashboard
+                      </a>
+                    </Link>
+                  </li> */}
                 </ul>
               </div>
             </nav>

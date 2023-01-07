@@ -1,9 +1,9 @@
+import Head from "next/head";
 import React from "react";
 import MayBeLike from "../../components/common/MayBeLike";
 import MovieInfo from "../../components/common/MovieInfo";
 import Player from "../../components/common/Player";
-import Head from "next/head";
-import { BASE_URL } from "../../util/Url";
+import homePageData from "../../data/home.json";
 const Movie = ({ content, suggestion }) => {
   return (
     <>
@@ -28,10 +28,8 @@ const Movie = ({ content, suggestion }) => {
 // }
 
 export async function getServerSideProps({ params }) {
-  const res = await fetch(`${BASE_URL}/videos/${params.movie}`);
-  const data = await res.json();
-  const result = await fetch(`${BASE_URL}/videos?type=${data.type}`);
-  const all = await result.json();
+  const data = homePageData.movies.find((item) => item._id === params.movie);
+  const all = homePageData.movies.filter((item) => item.type === data.type);
   const suggestion = all.filter((item) => item._id !== params.movie);
   return {
     props: { content: data, suggestion: suggestion },

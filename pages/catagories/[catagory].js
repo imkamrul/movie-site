@@ -1,10 +1,8 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
+import Head from "next/head";
 import React, { useState } from "react";
 import Card from "../../components/common/Card";
 import SmallCart from "../../components/common/SmallCart";
-import { BASE_URL } from "../../util/Url";
-import Head from "next/head";
+import homePageData from "../../data/home.json";
 const Catagories = ({ content, title }) => {
   const [result, setResult] = useState({});
   const handleMovieSearch = async (e) => {
@@ -54,36 +52,36 @@ const Catagories = ({ content, title }) => {
                   })}
               </div>
             </div>
-            {/* <div className="pt-10">
-            <h4 className="text-lg py-4">Filter By Category</h4>
-            <p className="my-1 cursor-pointer hover:text-themeText">
-              <i className="fa-solid fa-folder pr-3" /> football (1)
-            </p>
-            <p className="my-1 cursor-pointer hover:text-themeText">
-              <i className="fa-solid fa-folder pr-3" /> football (1)
-            </p>
-            <p className="my-1 cursor-pointer hover:text-themeText">
-              <i className="fa-solid fa-folder pr-3" /> Action (7)
-            </p>
-            <p className="my-1 cursor-pointer hover:text-themeText">
-              <i className="fa-solid fa-folder pr-3" /> Adventure (10)
-            </p>
-            <p className="my-1 cursor-pointer hover:text-themeText">
-              <i className="fa-solid fa-folder pr-3" /> Animation (4)
-            </p>
-            <p className="my-1 cursor-pointer hover:text-themeText">
-              <i className="fa-solid fa-folder pr-3" /> Basketball (1)
-            </p>
-            <p className="my-1 cursor-pointer hover:text-themeText">
-              <i className="fa-solid fa-folder pr-3" /> Biography (2)
-            </p>
-            <p className="my-1 cursor-pointer hover:text-themeText">
-              <i className="fa-solid fa-folder pr-3" /> Comedy (2)
-            </p>
-            <p className="my-1 cursor-pointer hover:text-themeText">
-              <i className="fa-solid fa-folder pr-3" /> cricket (5)
-            </p>
-          </div> */}
+            <div className="pt-10">
+              <h4 className="text-lg py-4">Filter By Category</h4>
+              <p className="my-1 cursor-pointer hover:text-themeText">
+                <i className="fa-solid fa-folder pr-3" /> football (1)
+              </p>
+              <p className="my-1 cursor-pointer hover:text-themeText">
+                <i className="fa-solid fa-folder pr-3" /> football (1)
+              </p>
+              <p className="my-1 cursor-pointer hover:text-themeText">
+                <i className="fa-solid fa-folder pr-3" /> Action (7)
+              </p>
+              <p className="my-1 cursor-pointer hover:text-themeText">
+                <i className="fa-solid fa-folder pr-3" /> Adventure (10)
+              </p>
+              <p className="my-1 cursor-pointer hover:text-themeText">
+                <i className="fa-solid fa-folder pr-3" /> Animation (4)
+              </p>
+              <p className="my-1 cursor-pointer hover:text-themeText">
+                <i className="fa-solid fa-folder pr-3" /> Basketball (1)
+              </p>
+              <p className="my-1 cursor-pointer hover:text-themeText">
+                <i className="fa-solid fa-folder pr-3" /> Biography (2)
+              </p>
+              <p className="my-1 cursor-pointer hover:text-themeText">
+                <i className="fa-solid fa-folder pr-3" /> Comedy (2)
+              </p>
+              <p className="my-1 cursor-pointer hover:text-themeText">
+                <i className="fa-solid fa-folder pr-3" /> cricket (5)
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -102,9 +100,11 @@ export default Catagories;
 // }
 
 export async function getServerSideProps({ params }) {
-  const res = await fetch(`${BASE_URL}/videos?type=${params.catagory}`);
-  const data = await res.json();
+  let result = homePageData.movies.filter(
+    (item) => item.type === params.catagory
+  );
+
   return {
-    props: { content: data, title: params.catagory },
+    props: { content: result, title: params.catagory },
   };
 }

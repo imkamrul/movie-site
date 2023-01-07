@@ -1,11 +1,9 @@
-import axios from "axios";
+import Head from "next/head";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { ToastContainer, toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useRouter } from "next/router";
-import Head from "next/head";
-import { BASE_URL } from "../util/Url";
 const Request = () => {
   const router = useRouter();
   const error = (text) => toast.error(text);
@@ -20,20 +18,24 @@ const Request = () => {
   const onSubmit = async (data) => {
     data.request_date = new Date().toLocaleDateString();
     data.status = "Pending";
-    try {
-      const res = await axios.post(`${BASE_URL}/request`, data);
-      if (res.status === 200) {
-        reset();
-        setLoading(false);
-        success("Success, your request has been sent");
-        setTimeout(() => {
-          router.push("/");
-        }, 5000);
-      }
-    } catch (err) {
-      setLoading(false);
-      error("Error, Can't sent your request");
-    }
+    success("Success, your request has been sent");
+    setTimeout(() => {
+      router.push("/");
+    }, 5000);
+    // try {
+    //   const res = await axios.post(`${BASE_URL}/request`, data);
+    //   if (res.status === 200) {
+    //     reset();
+    //     setLoading(false);
+    //     success("Success, your request has been sent");
+    //     setTimeout(() => {
+    //       router.push("/");
+    //     }, 5000);
+    //   }
+    // } catch (err) {
+    //   setLoading(false);
+    //   error("Error, Can't sent your request");
+    // }
   };
   return (
     <>

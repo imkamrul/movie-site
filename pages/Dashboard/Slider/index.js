@@ -1,9 +1,8 @@
+import Link from "next/link";
+import React, { useState } from "react";
 import Table from "../../../components/common/Table";
 import DashboardNav from "../../../components/Section/DashboardNav";
 import { BASE_URL } from "../../../util/Url";
-import React, { useState } from "react";
-import Link from "next/link";
-import useUser from "../../../hooks/useUser";
 const Home = ({ data }) => {
   const [sliderData, setSliderData] = useState(data);
   const handleSliderFilter = (catagory) => {
@@ -14,9 +13,7 @@ const Home = ({ data }) => {
       setSliderData(data);
     }
   };
-  const { admin } = useUser();
 
-  if (!admin) return null;
   return (
     <section className="flex">
       <DashboardNav />

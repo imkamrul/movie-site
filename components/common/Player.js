@@ -18,7 +18,7 @@ const Player = ({ content }) => {
   }, []);
   return (
     <section>
-      <div className="container mx-auto mt-10">{media}</div>
+      <div className="container mx-auto mt-10 md:mt-20">{media}</div>
     </section>
   );
 };

@@ -1,20 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import MovieSearch from "../components/common/MovieSearch";
 import MovieSection from "../components/common/MovieSection";
 import HeroSlider from "../components/HeroSlider/HeroSlider";
 import SingleSlider from "../components/singleSlider/SingleSlider";
 import homePageData from "../data/home.json";
-import { BASE_URL } from "../util/Url";
-const Index = ({ pageData, videos, sliders }) => {
-  const { hero_slider } = pageData;
-  const hollywood_movie = videos.filter((item) => item.type === "Hollywood");
-  const bollywood_movie = videos.filter((item) => item.type === "Bollywood");
-  const tollywood_movie = videos.filter((item) => item.type === "Tollywood");
+const Index = ({ pageData }) => {
+  const { movies, sliders } = pageData;
+  const hollywood_movie = movies.filter((item) => item.type === "Hollywood");
+  const bollywood_movie = movies.filter((item) => item.type === "Bollywood");
+  const tollywood_movie = movies.filter((item) => item.type === "Tollywood");
 
   return (
     <>
-      <HeroSlider heroSliderItem={hero_slider} content={sliders} />
-      <MovieSearch content={videos} />
+      <HeroSlider content={sliders} />
+      <MovieSearch content={movies} />
       <MovieSection
         content={hollywood_movie}
         title="Hollywood"
@@ -36,16 +35,10 @@ const Index = ({ pageData, videos, sliders }) => {
 };
 
 export default Index;
-export async function getServerSideProps() {
-  const slider_res = await fetch(`${BASE_URL}/slider`);
-  const slider_data = await slider_res.json();
-  const video_res = await fetch(`${BASE_URL}/videos`);
-  const video_data = await video_res.json();
+export async function getStaticProps() {
   return {
     props: {
       pageData: homePageData,
-      sliders: slider_data,
-      videos: video_data,
     },
   };
 }

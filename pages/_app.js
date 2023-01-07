@@ -1,4 +1,3 @@
-import { UserProvider } from "@auth0/nextjs-auth0";
 import Head from "next/head";
 
 import Layout from "../components/layout/Layout";
@@ -17,11 +16,10 @@ function MyApp({ Component, pageProps, props }) {
           referrerPolicy="no-referrer"
         />
       </Head>
-      <UserProvider>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </UserProvider>
+
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }
