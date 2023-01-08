@@ -1,13 +1,12 @@
-import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import useUser from "../hooks/useUser";
-import { useRouter } from "next/router";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import React from "react";
+import { useForm } from "react-hook-form";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Login = () => {
   const router = useRouter();
-  const { login } = useUser();
+
   const {
     register,
     handleSubmit,
